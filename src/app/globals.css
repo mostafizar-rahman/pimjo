@@ -10,6 +10,10 @@
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
   --color-gray-100: var(--gray-100);
+  --color-gray-200: var(--gray-200);
+  --color-gray-700: var(--gray-700);
+  --color-gray-900: var(--gray-900);
+  --color-border: var(--border);
 }
 
 :root {
@@ -18,15 +22,33 @@
   --primary: #ffffff;
   --secondary: #3758F9;
   --gray-100: #6B7280;
+  --gray-200: #9CA3AF;
+  --gray-700: #374151;
+  --gray-900: #111827;
+  --border: #D1D5DB;
 }
 
 .dark {
   --background: #0a0a0a;
   --foreground: #ededed;
+  --primary: #111827;
+  --secondary: #3758F9;
 }
 
 @layer base {
   body {
-    @apply bg-background text-foreground font-dm-sans
+    @apply bg-background text-foreground font-dm-sans leading-[150%]
+  }
+
+  button {
+    @apply cursor-pointer
+  }
+}
+
+@utility container {
+  @apply mx-auto px-4;
+
+  @variant 2xl {
+    max-width: 1312px
   }
 }
