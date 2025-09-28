@@ -1,3 +1,5 @@
+import DashboardToggleProvider from "@/providers/dashboardToggleProvider";
+import NextAuthSessionProvider from "@/providers/sessionProvider";
 import { DM_Sans } from "next/font/google";
 import "./globals.css";
 
@@ -18,7 +20,11 @@ export default function RootLayout({ children }) {
       <body
         className={`${dmSans.variable} antialiased`}
       >
-        {children}
+        <DashboardToggleProvider>
+          <NextAuthSessionProvider>
+            {children}
+          </NextAuthSessionProvider>
+        </DashboardToggleProvider>
       </body>
     </html>
   );

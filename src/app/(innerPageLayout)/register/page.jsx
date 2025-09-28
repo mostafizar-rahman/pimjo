@@ -1,19 +1,20 @@
-import SocalLogin from "@/component/client/socalLogin";
+import SocalLogin from "@/component/clientSection/socalLogin";
 import Button from "@/component/ui/button";
 import Input from "@/component/ui/input";
 import Title from "@/component/ui/title";
 import Link from "next/link";
 
-const Login = () => {
+const Register = () => {
   return (
     <section className="lg:py-[112px] py-20 bg-primary">
       <div className="container">
         <div className="xl:px-8">
           <div className="max-w-[400px] mx-auto">
             <div className="text-center">
-              <Title size={"48"}>Welcome back</Title>
+              <Title size={"48"}>Create account</Title>
               <p className="mt-4 tracking-[-0.2px] text-gray-100">
-                Login to continue your journey with us.
+                Join now to start shopping and enjoy complete access to
+                everything we offer.
               </p>
             </div>
             <div className="pt-9">
@@ -47,6 +48,20 @@ const Login = () => {
                     className={"max-h-12 py-4"}
                   />
                 </div>
+                <div className="mt-4">
+                  <label
+                    htmlFor="re-password"
+                    className="mb-2 block text-sm font-medium tracking-[-0.2px] leading-[142.857%] text-gray-700"
+                  >
+                    Re-type Password <span className="text-[#EF4444]">*</span>
+                  </label>
+                  <Input
+                    placeholder={"Enter your password"}
+                    id="re-password"
+                    type={"password"}
+                    className={"max-h-12 py-4"}
+                  />
+                </div>
                 <div className="flex justify-between mt-5">
                   <div className="flex items-center gap-3">
                     <input
@@ -69,7 +84,7 @@ const Login = () => {
                   </Link>
                 </div>
                 <Button variant={"secondary"} className={"mt-5 w-full max-h-12 py-4"}>
-                  Login
+                  Create Account
                 </Button>
                 <p className="mt-6 text-gray-100 tracking-[-0.2px]">
                   Don’t Have an account ?{" "}
@@ -89,4 +104,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Register;

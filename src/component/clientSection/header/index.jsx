@@ -1,9 +1,10 @@
-import { PiHeart, PiSearch, PiShoppingCart, PiUser } from "@/lib/icons";
+import { PiHeart, PiSearch, PiShoppingCart } from "@/lib/icons";
 import Image from "next/image";
 import Link from "next/link";
 import MobileNavigations from "./mobileNavigations";
 import Navigations from "./navigations";
 import TopHeder from "./topHeder";
+import UserProfile from "./userProfile";
 
 const navItems = [
   {
@@ -49,7 +50,7 @@ const Header = () => {
                   height={28}
                   src={"/images/logo.png"}
                   alt="logo"
-                  className="sm:w-auto max-w-[103px]"
+                  className="sm:w-auto w-[103px]"
                 />
               </Link>
             </div>
@@ -58,9 +59,7 @@ const Header = () => {
               <div className="text-gray-700 cursor-pointer w-6 h-6 flex justify-center items-center">
                 <PiSearch />
               </div>
-              <div className="text-gray-700 cursor-pointer w-6 h-6 flex justify-center items-center">
-                <PiUser />
-              </div>
+              <UserProfile />
               <div className="text-gray-700 cursor-pointer w-6 h-6 flex justify-center items-center relative">
                 <PiHeart />
                 <div className="absolute -top-1.5 -right-1.5 w-[18px] h-[18px] border border-primary rounded-2xl bg-[#1D4ED8] text-center flex justify-center items-center text-[10px] font-medium text-primary tracking-[-0.2px]">

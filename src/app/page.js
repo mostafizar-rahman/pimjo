@@ -1,10 +1,10 @@
-import AdsBanner from "@/component/client/adsBanner"
-import FeaturedProducts from "@/component/client/featuredProducts"
-import Footer from "@/component/client/footer"
-import Header from "@/component/client/header"
-import Hero from "@/component/client/hero"
-import ShopbyCategory from "@/component/client/shopByCategory"
-import Testimonial from "@/component/client/testimonial"
+import AdsBanner from "@/component/clientSection/adsBanner"
+import FeaturedProducts from "@/component/clientSection/featuredProducts"
+import Footer from "@/component/clientSection/footer"
+import Header from "@/component/clientSection/header"
+import Hero from "@/component/clientSection/hero"
+import ShopbyCategory from "@/component/clientSection/shopByCategory"
+import Testimonial from "@/component/clientSection/testimonial"
 
 const Home = () => {
   return (

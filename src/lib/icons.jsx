@@ -367,3 +367,395 @@ export const PiFacebookOrginal = () => {
     </svg>
   );
 };
+
+// ====================================================dashboard icon start hefe ==============================================
+export const PiMenuDash = ({ className }) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={20}
+      height={20}
+      viewBox="0 0 20 20"
+      fill="none"
+      className={className}
+    >
+      <path
+        d="M3.33334 5L16.6667 5M3.33334 15L16.6667 15M3.33334 10L10 10"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};
+
+export const PiSearchDash = ({ className }) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={20}
+      height={20}
+      viewBox="0 0 20 20"
+      fill="none"
+      className={className}
+    >
+      <path
+        d="M14.3822 14.3831L17.7073 17.7081M16.4583 9.37412C16.4583 13.2852 13.287 16.4558 9.37499 16.4558C5.46297 16.4558 2.29166 13.2852 2.29166 9.37412C2.29166 5.46304 5.46297 2.29248 9.37499 2.29248C13.287 2.29248 16.4583 5.46304 16.4583 9.37412Z"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};
+
+export const PiMoon = ({ className }) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={20}
+      height={20}
+      viewBox="0 0 20 20"
+      fill="none"
+      classname={className}
+    >
+      <path
+        d="M6.2467 6.66825C6.2467 10.351 9.2322 13.3365 12.915 13.3365C14.6685 13.3365 16.264 12.6597 17.4543 11.553C16.5839 14.856 13.5764 17.2916 9.99996 17.2916C5.74276 17.2916 2.29163 13.8405 2.29163 9.58329C2.29163 6.00689 4.72724 2.99935 8.03024 2.12891C6.92355 3.31927 6.2467 4.91471 6.2467 6.66825Z"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};
+
+export const PiNotification = ({ className }) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={20}
+      height={20}
+      viewBox="0 0 20 20"
+      fill="none"
+      className={className}
+    >
+      <path
+        d="M9.86088 1.87581V3.12581M9.86088 3.12581C12.9675 3.12581 15.4859 5.64421 15.4859 8.75081V14.7925H4.23588V8.75081C4.23588 5.64421 6.75428 3.12581 9.86088 3.12581ZM8.61088 17.2919H11.1109M3.19421 14.7925H16.5275"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};
+
+export const PiArrowUp = ({ className }) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={12}
+      height={12}
+      viewBox="0 0 12 12"
+      fill="none"
+      className={className}
+    >
+      <path
+        d="M5.99805 1.99951L5.99805 10.0002M3 4.99751L5.9999 1.99951L9 4.99751"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};
+
+export const PiUsers = ({ className }) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={24}
+      height={24}
+      viewBox="0 0 24 24"
+      fill="none"
+      className={className}
+    >
+      <path
+        d="M14.109 5.10414C14.4743 4.94178 14.8789 4.85156 15.3045 4.85156C16.932 4.85156 18.2514 6.17095 18.2514 7.79851C18.2514 9.42606 16.932 10.7455 15.3045 10.7455C14.8794 10.7455 14.4753 10.6555 14.1103 10.4935M15.797 13.2207C19.5989 13.4453 20.821 16.009 21.2134 17.6906C21.3993 18.4875 20.7424 19.1487 19.9241 19.1487H17.59M11.7512 7.79855C11.7512 9.4261 10.4318 10.7455 8.80427 10.7455C7.17671 10.7455 5.85732 9.4261 5.85732 7.79855C5.85732 6.171 7.17671 4.8516 8.80427 4.8516C10.4318 4.8516 11.7512 6.171 11.7512 7.79855ZM8.74941 13.205C12.9833 13.205 14.3026 15.9309 14.7132 17.6906C14.8991 18.4875 14.2422 19.1487 13.4239 19.1487H4.07489C3.25661 19.1487 2.59973 18.4875 2.78565 17.6906C3.19623 15.9309 4.51554 13.205 8.74941 13.205Z"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};
+
+export const PiCube = ({ className }) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={20}
+      height={20}
+      viewBox="0 0 20 20"
+      fill="none"
+      className={className}
+    >
+      <path
+        d="M10 19.072V9.02882M10 9.02882C9.77031 9.02876 9.54064 8.97598 9.32963 8.87047M10 9.02882C10.23 9.02889 10.46 8.97611 10.6712 8.87047M10.6712 8.87047C10.249 9.08161 9.75191 9.08161 9.32963 8.87047M10.6712 8.87047L18.2212 5.09562M9.32963 8.87047L1.7797 5.09562M18.2212 5.09562C18.078 4.87199 17.8754 4.68611 17.6287 4.56277L10.6712 1.08413C10.249 0.872998 9.75191 0.872997 9.32963 1.08413L2.37216 4.56277C2.12546 4.68611 1.92287 4.87199 1.7797 5.09562M18.2212 5.09562C18.3729 5.33264 18.4579 5.61207 18.4579 5.90441V14.0934C18.4579 14.6615 18.1369 15.1809 17.6287 15.435L10.6712 18.9137C10.249 19.1248 9.75191 19.1248 9.32963 18.9137L2.37216 15.435C1.86398 15.1809 1.54297 14.6615 1.54297 14.0934V5.90441C1.54297 5.61207 1.62796 5.33264 1.7797 5.09562"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};
+
+export const PiThreeDot = ({ className }) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={24}
+      height={24}
+      viewBox="0 0 24 24"
+      fill="none"
+      className={className}
+    >
+      <path
+        d="M11.9941 6L12.0041 6M11.9941 18H12.0041M11.9941 12H12.0041"
+        stroke="currentColor"
+        strokeWidth="3.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};
+
+export const PiDashboard = () => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={24}
+      height={24}
+      viewBox="0 0 24 24"
+      fill="none"
+    >
+      <path
+        d="M4 5.5C4 4.67157 4.67157 4 5.5 4H9C9.82843 4 10.5 4.67157 10.5 5.5V8.99998C10.5 9.82841 9.82843 10.5 9 10.5H5.5C4.67157 10.5 4 9.82841 4 8.99998V5.5Z"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M4 15C4 14.1716 4.67157 13.5 5.5 13.5H9C9.82843 13.5 10.5 14.1716 10.5 15V18.5C10.5 19.3284 9.82843 20 9 20H5.5C4.67157 20 4 19.3284 4 18.5V15Z"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M13.5 5.5C13.5 4.67157 14.1716 4 15 4H18.5C19.3284 4 20 4.67157 20 5.5V8.99998C20 9.82841 19.3284 10.5 18.5 10.5H15C14.1716 10.5 13.5 9.82841 13.5 8.99998V5.5Z"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M13.5 15C13.5 14.1716 14.1716 13.5 15 13.5H18.5C19.3284 13.5 20 14.1716 20 15V18.5C20 19.3284 19.3284 20 18.5 20H15C14.1716 20 13.5 19.3284 13.5 18.5V15Z"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};
+
+export const PiArrowDownDash = ({ className }) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={18}
+      height={18}
+      viewBox="0 0 18 18"
+      fill="none"
+      className={className}
+    >
+      <path
+        d="M4.3125 7.21875L9 11.9062L13.6875 7.21875"
+        stroke="currentColor"
+        strokeWidth="1.125"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};
+
+export const PiUserDash = ({ className }) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={20}
+      height={20}
+      viewBox="0 0 20 20"
+      fill="none"
+      className={className}
+    >
+      <path
+        d="M15.7746 17.1074V16.8455C15.7746 14.3602 13.7599 12.3455 11.2746 12.3455H8.72461C6.23933 12.3455 4.22461 14.3602 4.22461 16.8455V17.1074M19.25 10C19.25 15.1086 15.1086 19.25 10 19.25C4.89137 19.25 0.75 15.1086 0.75 10C0.75 4.89137 4.89137 0.75 10 0.75C15.1086 0.75 19.25 4.89137 19.25 10ZM12.7669 7.26784C12.7669 8.79647 11.5277 10.0357 9.99911 10.0357C8.47048 10.0357 7.23128 8.79647 7.23128 7.26784C7.23128 5.7392 8.47048 4.5 9.99911 4.5C11.5277 4.5 12.7669 5.7392 12.7669 7.26784Z"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};
+
+export const PiSettings = ({ className }) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={24}
+      height={24}
+      viewBox="0 0 24 24"
+      fill="none"
+      className={className}
+    >
+      <path
+        d="M6.77479 5.51906C6.06492 5.10922 5.15711 5.35238 4.74726 6.06225L3.23127 8.68803C2.82152 9.39774 3.06469 10.3052 3.7744 10.715C4.76361 11.2861 4.76362 12.7139 3.77441 13.285C3.06471 13.6948 2.82154 14.6023 3.23129 15.312L4.7473 17.9378C5.15714 18.6476 6.06495 18.8908 6.77481 18.481C7.76413 17.9098 9.00096 18.6237 9.00096 19.766C9.00096 20.5856 9.66536 21.25 10.4849 21.25H13.5173C14.3367 21.25 15.001 20.5856 15.001 19.7663C15.001 18.6243 16.2372 17.9104 17.2261 18.4813C17.9356 18.891 18.8429 18.6479 19.2525 17.9384L20.7689 15.3119C21.1787 14.6022 20.9355 13.6948 20.2258 13.285C19.2366 12.7139 19.2366 11.2861 20.2258 10.715C20.9355 10.3053 21.1787 9.39779 20.7689 8.6881L19.2526 6.06167C18.8429 5.35214 17.9357 5.10904 17.2261 5.51869C16.2372 6.08967 15.001 5.37573 15.001 4.23377C15.001 3.41437 14.3367 2.75 13.5173 2.75L10.485 2.75C9.66537 2.75 9.00096 3.41441 9.00096 4.23399C9.00096 5.37637 7.76412 6.09025 6.77479 5.51906Z"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M15.085 11.9999C15.085 13.7037 13.7038 15.0849 12 15.0849C10.2962 15.0849 8.91504 13.7037 8.91504 11.9999C8.91504 10.2961 10.2962 8.91493 12 8.91493C13.7038 8.91493 15.085 10.2961 15.085 11.9999Z"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};
+
+export const PiInfo = ({ className }) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={20}
+      height={20}
+      viewBox="0 0 20 20"
+      fill="none"
+      className={className}
+    >
+      <path
+        d="M10 6.66992H10.0007"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M10.0001 9.21481V13.4392M19.25 10C19.25 15.1086 15.1086 19.25 10 19.25C4.89137 19.25 0.75 15.1086 0.75 10C0.75 4.89137 4.89137 0.75 10 0.75C15.1086 0.75 19.25 4.89137 19.25 10Z"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};
+
+export const PiExit = ({ className }) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={17}
+      height={20}
+      viewBox="0 0 17 20"
+      fill="none"
+      className={className}
+    >
+      <path
+        d="M1 10L8.75 10M4.99928 6L1.00195 9.99987L4.99928 14M6.75 2.99609V2.25C6.75 1.42157 7.42157 0.75 8.25 0.75H14.25C15.0784 0.75 15.75 1.42157 15.75 2.25V17.75C15.75 18.5784 15.0784 19.25 14.25 19.25H8.25C7.42157 19.25 6.75 18.5784 6.75 17.75V17"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};
+
+export const PiCloseDash = ({ className }) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={24}
+      height={24}
+      viewBox="0 0 24 24"
+      fill="none"
+      className={className}
+    >
+      <path
+        d="M6.75098 17.249L17.2489 6.75111M6.75098 6.75098L17.2489 17.2489"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};
+
+export const PiFilter = ({ className }) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={20}
+      height={20}
+      viewBox="0 0 20 20"
+      fill="none"
+      className={className}
+    >
+      <path
+        d="M14.6533 5.90421C14.6533 4.48439 13.5023 3.33337 12.0825 3.33337C10.6627 3.33337 9.5117 4.48439 9.51168 5.90421M14.6533 5.90421C14.6533 7.32404 13.5023 8.47504 12.0825 8.47504C10.6627 8.47504 9.51168 7.32404 9.51168 5.90421M14.6533 5.90421L17.7083 5.90417M9.51168 5.90421L2.29163 5.90417M5.34658 14.0959C5.34658 12.676 6.49758 11.525 7.91741 11.525C9.33724 11.525 10.4882 12.676 10.4882 14.0959M5.34658 14.0959C5.34658 15.5157 6.49758 16.6667 7.91741 16.6667C9.33724 16.6667 10.4882 15.5157 10.4882 14.0959M5.34658 14.0959L2.29163 14.0958M10.4882 14.0959L17.7083 14.0958"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};
+
+export const PiCalender = ({ className }) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={20}
+      height={20}
+      viewBox="0 0 20 20"
+      fill="none"
+      className={className}
+    >
+      <path
+        d="M6.66659 2.29167V3.75001M13.3333 2.29167V3.75001M3.33325 7.50001H16.6666M4.58325 17.0833H15.4166C16.1069 17.0833 16.6666 16.5237 16.6666 15.8333V5.00001C16.6666 4.30965 16.1069 3.75001 15.4166 3.75001H4.58325C3.8929 3.75001 3.33325 4.30965 3.33325 5.00001V15.8333C3.33325 16.5237 3.8929 17.0833 4.58325 17.0833Z"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};

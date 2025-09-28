@@ -14,6 +14,19 @@
   --color-gray-700: var(--gray-700);
   --color-gray-900: var(--gray-900);
   --color-border: var(--border);
+
+
+  /* Dashboard Colors */
+  --color-background-dash: var(--background-dash);
+  --color-foreground-dash: var(--foreground-dash);
+  --color-gray-100-dash: var(--gray-100-dash);
+  --color-gray-200-dash: var(--gray-200-dash);
+  --color-gray-300-dash: var(--gray-300-dash);
+  --color-gray-400-dash: var(--gray-400-dash);
+  --color-gray-600-dash: var(--gray-600-dash);
+  --color-gray-900-dash: var(--gray-900-dash);
+  --color-border-dash: var(--border-dash);
+  --color-border-secondary-dash: var(--border-secondary-dash);
 }
 
 :root {
@@ -26,6 +39,19 @@
   --gray-700: #374151;
   --gray-900: #111827;
   --border: #D1D5DB;
+
+
+  /* -------- Dashboard---------- */
+  --background-dash: #F9FAFB;
+  --foreground-dash: #1D2939;
+  --gray-100-dash: #667085;
+  --gray-200-dash: #98A2B3;
+  --gray-300-dash: #F2F4F7;
+  --gray-400-dash: #F9FAFB;
+  --gray-600-dash: #344054;
+  --gray-900-dash: #101828;
+  --border-dash: #E4E7EC;
+  --border-secondary-dash: #F2F4F7;
 }
 
 .dark {

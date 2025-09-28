@@ -1,0 +1,114 @@
+import { PiFilter } from "@/lib/icons";
+import Image from "next/image";
+
+export const StatusBadge = ({ status }) => {
+  let bgColorClass = "";
+
+  switch (status.toLowerCase()) {
+    case "delivered":
+      bgColorClass = "bg-[#ECFDF3] text-[#039855]";
+      break;
+    case "pending":
+      bgColorClass = "bg-[#FFFAEB] text-[#DC6803]";
+      break;
+    case "canceled":
+      bgColorClass = "bg-[#FEF3F2] text-[#D92D20]";
+      break;
+    default:
+      bgColorClass = "bg-gray-100-dash text-gray-700";
+  }
+
+  return (
+    <span
+      className={`px-2 py-0.5 text-xs font-medium rounded-full ${bgColorClass}`}
+    >
+      {status}
+    </span>
+  );
+};
+
+const RecentOrders = ({ orders }) => {
+  return (
+    <div className="bg-primary md:px-6 px-5 pb-3 rounded-2xl border border-border-dash min-w-0">
+      <div className="py-4 flex items-center justify-between">
+        <h5 className="text-lg font-semibold leading-[155.556%]">
+          Recent Orders
+        </h5>
+        <div className="flex gap-3">
+          <button className="max-h-11 border border-border-dash shadow-[0_1px_2px_0_rgba(16,24,40,0.05)] bg-gray-400-dash flex items-center gap-2 rounded-lg px-6 py-3">
+            <PiFilter />
+            <span className="text-sm font-medium leading-[142.857%]">
+              Filter
+            </span>
+          </button>
+          <button className="max-h-11 border border-border-dash shadow-[0_1px_2px_0_rgba(16,24,40,0.05)] flex items-center gap-2 rounded-lg px-6 py-3">
+            <span className="text-sm font-medium leading-[142.857%]">
+              See all
+            </span>
+          </button>
+        </div>
+      </div>
+
+      <div className="overflow-x-auto">
+        <table className="min-w-[600px]">
+          <thead>
+            <tr className="text-gray-100-dash leading-[150%] font-medium border-b border-b-border-secondary-dash border-t border-t-border-secondary-dash text-xs">
+              <th className="w-[226px] py-3 text-left font-medium">Products</th>
+              <th className="w-[130px] py-3 pl-6 text-left font-medium">
+                Category
+              </th>
+              <th className="w-[124px] py-3 pl-6 text-left font-medium">
+                Price
+              </th>
+              <th className="w-[117px] py-3 pl-6 text-left font-medium">
+                Status
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            {orders.map((product, index) => (
+              <tr
+                key={product.id}
+                className="border-b border-b-border-secondary-dash last:border-b-0"
+              >
+                {/* Product Info */}
+                <td className="w-[226px] py-2">
+                  <div className="flex items-center gap-3">
+                    <div className="w-[50px] h-[50px] flex-shrink-0 bg-gray-400-dash rounded-md">
+                      <Image width={50} height={50} src={""} alt="img" />
+                    </div>
+                    <div className="min-w-0">
+                      <div className="font-medium text-sm leading-[142.857%] line-clamp-1">
+                        {product.name}
+                      </div>
+                      <div className="text-xs text-gray-100-dash leading-[150%]">
+                        {product.variants}
+                      </div>
+                    </div>
+                  </div>
+                </td>
+
+                {/* Category */}
+                <td className="w-[130px] py-2 pl-6 text-sm text-gray-100-dash leading-[142.857%]">
+                  {product.category}
+                </td>
+
+                {/* Price */}
+                <td className="w-[120px] py-2 pl-6 text-sm text-gray-100-dash leading-[142.857%]">
+                  {product.price}
+                </td>
+
+                {/* Status Badge */}
+                <td className="w-[117px] py-2 pl-6">
+                  <StatusBadge status={product.status} />
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  );
+};
+
+export default RecentOrders;
