@@ -4,9 +4,9 @@ Pimjo is a modern, full-featured e-commerce admin dashboard built with Next.js a
 
 ## Features
 
-- **Interactive Dashboard:** At-a-glance metrics for customers, orders, and revenue with beautiful charts powered by Recharts.
+- **Interactive Dashboard:** At-a-glance metrics for customers, orders, and revenue with beautiful charts powered by Recharts. Switch Light and Dark Mode .
 - **Authentication:** Secure login and registration functionality using NextAuth.js.
-- **Product & Order Management:** (Inferred) Interface for managing products and viewing recent orders.
+- **Add To Cart:** Product Add To Cart and save the product in local storage.
 - **Responsive Design:** A seamless experience across all devices, from mobile to desktop.
 - **Client & Dashboard Layouts:** Separate, optimized layouts for the public-facing pages and the secure dashboard area.
 
@@ -50,6 +50,13 @@ To start the development server (with Turbopack for high-speed development):
 pnpm dev
 ```
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Demo Credentials
+
+You can use the following credentials to log in and explore the dashboard:
+
+- **Email:** `admin@example.com`
+- **Password:** `admin123`
 
 ## Available Scripts
 
