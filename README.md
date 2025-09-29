@@ -1,12 +1,12 @@
-# Pimjo - E-commerce Dashboard
+# Pimjo - E-commerce
 
-Pimjo is a modern, full-featured e-commerce admin dashboard built with Next.js and Tailwind CSS. It provides a clean interface to monitor sales, manage orders, and view customer demographics.
+Pimjo is a modern, full-featured e-commerce platform built with Next.js and Tailwind CSS. It comes with a sleek landing page for customers and a powerful admin dashboard to manage the store. The platform offers a smooth shopping experience while giving store owners full control over products, orders, and customer insights.
 
 ## Features
 
-- **Interactive Dashboard:** At-a-glance metrics for customers, orders, and revenue with beautiful charts powered by Recharts. Switch Light and Dark Mode .
+- **Interactive Dashboard:** Get a quick overview of sales, revenue, orders, and customer activity with beautiful charts powered by Recharts. Supports light and dark mode for a personalized experience.
 - **Authentication:** Secure login and registration functionality using NextAuth.js.
-- **Add To Cart:** Product Add To Cart and save the product in local storage.
+- **Add To Cart:** Add products to the cart, save them in local storage, and manage items with ease.
 - **Responsive Design:** A seamless experience across all devices, from mobile to desktop.
 - **Client & Dashboard Layouts:** Separate, optimized layouts for the public-facing pages and the secure dashboard area.
 
