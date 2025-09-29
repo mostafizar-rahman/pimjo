@@ -1,6 +1,7 @@
-import { PiHeart, PiSearch, PiShoppingCart } from "@/lib/icons";
+import { PiHeart, PiSearch } from "@/lib/icons";
 import Image from "next/image";
 import Link from "next/link";
+import CartSidebar from "./cartSidebar";
 import MobileNavigations from "./mobileNavigations";
 import Navigations from "./navigations";
 import TopHeder from "./topHeder";
@@ -39,7 +40,7 @@ const Header = () => {
   return (
     <>
       <TopHeder />
-      <header className="bg-primary py-[26px] border-b border-b-[#E5E7EB] max-h-20">
+      <header className="bg-primary py-[26px] border-b border-b-[#E5E7EB] dark:border-b-[#252a36] max-h-20">
         <div className="container">
           <div className="flex justify-between items-center">
             <div className="flex items-center gap-[22px]">
@@ -66,12 +67,7 @@ const Header = () => {
                   2
                 </div>
               </div>
-              <div className="text-gray-700 cursor-pointer w-6 h-6 flex justify-center items-center relative">
-                <PiShoppingCart />
-                <div className="absolute -top-2 -right-2 w-[18px] h-[18px] border border-primary rounded-2xl bg-[#1D4ED8] text-center flex justify-center items-center text-[10px] font-medium text-primary tracking-[-0.2px]">
-                  3
-                </div>
-              </div>
+              <CartSidebar />
             </div>
           </div>
         </div>

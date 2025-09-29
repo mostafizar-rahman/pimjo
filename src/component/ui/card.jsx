@@ -1,9 +1,12 @@
+'use client'
+import { useCart } from "@/providers/cartProvider";
 import { PiHeart, PiShoppingCart } from "@/lib/icons";
 import Image from "next/image";
 import Link from "next/link";
 import Button from "./button";
 
 const Card = ({ product }) => {
+  const { addToCart } = useCart();
   return (
     <div className="rounded-lg group">
       <div className="relative">
@@ -30,7 +33,7 @@ const Card = ({ product }) => {
       <div className="mt-4">
         <div className="flex justify-between mb-1">
           <Link
-            href={""}
+            href={"#"}
             className="font-semibold tracking-[-0.2px] hover:text-secondary transition-all duration-500"
           >
             {product.title}
@@ -40,7 +43,11 @@ const Card = ({ product }) => {
         <small className="leading-[142.857%] tracking-[-0.2px] text-gray-100">
           {product.description}
         </small>
-        <Button variant={"outline"} className={"mt-5 w-full"}>
+        <Button
+          variant={"outline"}
+          className={"mt-5 w-full"}
+          onClick={() => addToCart(product)}
+        >
           <PiShoppingCart className={"w-[18px] h-[15px]"} />
           Add to cart
         </Button>

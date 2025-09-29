@@ -1,3 +1,4 @@
+import { CartProvider } from "@/providers/cartProvider";
 import DashboardToggleProvider from "@/providers/dashboardToggleProvider";
 import NextAuthSessionProvider from "@/providers/sessionProvider";
 import { DM_Sans } from "next/font/google";
@@ -24,7 +25,7 @@ export default function RootLayout({ children }) {
       >
         <DashboardToggleProvider>
           <NextAuthSessionProvider>
-            {children}
+            <CartProvider>{children}</CartProvider>
           </NextAuthSessionProvider>
         </DashboardToggleProvider>
       </body>

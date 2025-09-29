@@ -5,6 +5,7 @@ import {
   PiMenuDash,
   PiMoon,
   PiSearch,
+  PiSun,
   PiThreeDot,
 } from "@/lib/icons";
 import { cn } from "@/lib/utils";
@@ -18,6 +19,16 @@ import ProfileDropdown from "./profileDropdown";
 const Header = () => {
   const { isSidebarShow, setIsSidebarShow } = useContext(ToggleContext);
   const [userActionsShow, setUserActionsShow] = useState(false);
+  const [isDark, setIsDark] = useState(false);
+  const handleMoodToggler = () => {
+    if (isDark) {
+      setIsDark(false);
+      document.querySelector("body").classList.remove("dark");
+    } else {
+      setIsDark(true);
+      document.querySelector("body").classList.add("dark");
+    }
+  };
   return (
     <div className="sticky top-0 z-50">
       <div className="lg:px-6 px-3 py-4 border-b border-b-border-dash bg-primary">
@@ -71,8 +82,11 @@ const Header = () => {
           {/* right side moon, notifications, profile  */}
           <div className="hidden md:flex items-center justify-end gap-4 w-full">
             <div className="flex items-center gap-3">
-              <button className="text-gray-100-dash rounded-full border border-border-dash w-11 h-11 flex justify-center items-center">
-                <PiMoon />
+              <button
+                onClick={handleMoodToggler}
+                className="text-gray-100-dash rounded-full border border-border-dash w-11 h-11 flex justify-center items-center"
+              >
+                {isDark ? <PiSun /> : <PiMoon />}
               </button>
               <NotificationsDropdown />
             </div>

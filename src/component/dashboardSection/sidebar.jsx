@@ -59,8 +59,8 @@ const Sidebar = () => {
                   <Link
                     href={href}
                     className={cn(
-                      "py-2 px-3 rounded-lg text-sm font-medium  hover:text-secondary hover:bg-[#ECF3FF] transition-all duration-500 flex items-center gap-3",
-                      pathName === href ? "text-secondary bg-[#ECF3FF]" : ""
+                      "py-2 px-3 rounded-lg text-sm font-medium  hover:text-secondary hover:bg-[#ECF3FF] hover:dark:bg-[#465FFF1F] transition-all duration-500 flex items-center gap-3",
+                      pathName === href ? "text-secondary bg-[#ECF3FF] dark:bg-[#465FFF1F]" : ""
                     )}
                   >
                     <span className="w-6 h-6 flex items-center justify-center">

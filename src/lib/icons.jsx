@@ -760,7 +760,7 @@ export const PiCalender = ({ className }) => {
   );
 };
 
-export const PiArrowLeft = ({className}) => {
+export const PiArrowLeft = ({ className }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -772,6 +772,27 @@ export const PiArrowLeft = ({className}) => {
     >
       <path
         d="M3.33325 9.99715L16.6677 9.99715M8.32991 5L3.33325 9.99984L8.32991 15"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};
+
+export const PiSun = ({className}) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={20}
+      height={20}
+      viewBox="0 0 20 20"
+      fill="none"
+      className={className}
+    >
+      <path
+        d="M9.99984 2.29166V3.54166M15.4507 4.55078L14.5668 5.43466M17.7082 10H16.4582M15.4507 15.4492L14.5668 14.5653M9.99984 16.4583V17.7083M5.43278 14.5703L4.5489 15.4542M3.5415 10H2.2915M5.43278 5.42969L4.5489 4.5458M6.0415 10C6.0415 12.1861 7.81371 13.9583 9.99984 13.9583C12.186 13.9583 13.9582 12.1861 13.9582 10C13.9582 7.81387 12.186 6.04166 9.99984 6.04166C7.81371 6.04166 6.0415 7.81387 6.0415 10Z"
         stroke="currentColor"
         strokeWidth="1.5"
         strokeLinecap="round"
