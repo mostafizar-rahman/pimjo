@@ -78,6 +78,7 @@ const Footer = () => {
         <div className="container">
           <div className="xl:px-8">
             <div className="flex lg:flex-row flex-col justify-between gap-x-10 gap-y-11">
+              {/* logo and socil icons */}
               <div className="max-w-[378px] shrink flex flex-col justify-between">
                 <div>
                   <Link href={"#"}>
@@ -133,7 +134,9 @@ const Footer = () => {
                   </ul>
                 </div>
               </div>
-              <div className="max-w-[744px] shrink-0 flex sm:flex-row flex-col flex-wrap lg:flex-nowrap justify-between xl:gap-x-20 gap-x-10 gap-y-11">
+
+              <div className="max-w-[744px] shrink-0 flex md:flex-row flex-col justify-between xl:gap-x-20 gap-x-10 gap-y-11">
+                {/* Clothing links */}
                 <div className="shrink-0">
                   <h5 className="font-semibold text-xl tracking-[-0.2px] leading-[140%]">
                     Clothing
@@ -151,6 +154,7 @@ const Footer = () => {
                     ))}
                   </ul>
                 </div>
+                {/* Shoes links */}
                 <div className="shrink-0">
                   <h5 className="font-semibold text-xl tracking-[-0.2px] leading-[140%]">
                     Shoes
@@ -180,6 +184,7 @@ const Footer = () => {
                     ))}
                   </ul>
                 </div>
+                {/* Newsletter */}
                 <div className="sm:max-w-[364px] shrink w-full">
                   <h5 className="font-semibold text-xl tracking-[-0.2px] leading-[140%]">
                     Newsletter
@@ -200,11 +205,11 @@ const Footer = () => {
         </div>
       </div>
       {/* footer bottom */}
-      <div className="bg-primary py-6 border-b border-b-background">
+      <div className="bg-primary lg:py-6 py-8 border-b border-b-background">
         <div className="container">
           <div className="xl:px-8">
-            <div className="flex sm:flex-row flex-col justify-between items-center flex-wrap gap-10">
-              <div className="flex items-center gap-3">
+            <div className="flex md:flex-row flex-col justify-between items-center gap-x-10 gap-y-6">
+              <div className="flex lg:flex-row flex-col items-center gap-3 relative lg:after:block after:hidden after:absolute after:h-[100px] after:w-px after:-right-16 after:-top-8 after:bg-background">
                 <div className="w-10 h-10 flex justify-center items-center rounded-lg bg-background text-gray-700">
                   <PiHeadPhone />
                 </div>
@@ -220,7 +225,8 @@ const Footer = () => {
                   </a>
                 </div>
               </div>
-              <div className="flex xl:flex-row flex-col xl:items-center gap-3">
+              <span className="md:hidden w-full h-px bg-background"></span>
+              <div className="flex xl:flex-row flex-col items-center text-center xl:text-start gap-3 relative lg:after:block after:hidden after:absolute after:h-[100px] after:w-px after:-right-16 after:-top-8 after:bg-background">
                 <div>
                   <p className="font-semibold tracking-[-0.2px]">
                     Download Now on
@@ -244,7 +250,8 @@ const Footer = () => {
                   />
                 </div>
               </div>
-              <div>
+              <span className="md:hidden w-full h-px bg-background"></span>
+              <div className="text-center md:text-start">
                 <p className="text-sm mb-3 font-medium text-gray-100 leading-[143%]">
                   We Support
                 </p>
@@ -263,11 +270,11 @@ const Footer = () => {
       <div className="bg-primary py-5">
         <div className="container">
           <div className="xl:px-8">
-            <div className="flex justify-between items-center">
+            <div className="flex md:flex-row flex-col-reverse justify-between items-center gap-y-5">
               <p className="text-gray-100 tracking-[-0.2px]">
                 © Copyright 2025 - TailGrids.
               </p>
-              <ul className="flex items-center gap-8">
+              <ul className="flex items-center sm:flex-row flex-col gap-x-8 gap-y-4">
                 <li>
                   <Link
                     href={"#"}

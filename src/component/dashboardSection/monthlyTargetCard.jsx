@@ -33,7 +33,7 @@ const MonthlyTargetCard = () => {
           </p>
         </div>
       </div>
-      <div className="py-5 px-[66px] flex items-center justify-between">
+      <div className="py-5 lg:px-[66px] md:px-10 px-6 flex items-center justify-between">
         <div className="text-center">
           <small className="text-gray-100-dash leading-[142.857%]">
             Target

@@ -50,7 +50,7 @@ const RecentOrders = ({ orders }) => {
       </div>
 
       <div className="overflow-x-auto">
-        <table className="min-w-[600px]">
+        <table className="min-w-[600px] w-full">
           <thead>
             <tr className="text-gray-100-dash leading-[150%] font-medium border-b border-b-border-secondary-dash border-t border-t-border-secondary-dash text-xs">
               <th className="w-[226px] py-3 text-left font-medium">Products</th>

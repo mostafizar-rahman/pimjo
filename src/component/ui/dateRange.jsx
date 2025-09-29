@@ -57,7 +57,7 @@ const DateRange = () => {
       </button>
 
       {showCalendar && (
-        <div className="absolute right-0 top-12 bg-primary p-5 rounded-md shadow-lg border border-border-dash z-50">
+        <div className="absolute sm:right-0 -right-1/2 top-12 bg-primary p-5 rounded-md shadow-lg border border-border-dash z-50">
           <DayPicker
             mode="range"
             selected={selected}
