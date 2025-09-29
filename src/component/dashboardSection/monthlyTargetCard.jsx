@@ -3,11 +3,11 @@ import SemicircleProgress from "../ui/semicircleProgress";
 
 const MonthlyTargetCard = () => {
   return (
-    <div className="bg-gray-300-dash border border-border-dash rounded-2xl">
+    <div className="bg-gray-300-dash outline outline-border-dash rounded-2xl">
       <div className="bg-primary md:p-6 p-5 md:pb-8 pb-6 rounded-2xl ">
         <div>
           <div className="flex items-center justify-between">
-            <h5 className="text-lg font-semibold leading-[155.556%]">
+            <h5 className="text-lg font-semibold leading-[1.55555555556]">
               Monthly Target
             </h5>
             <span className="text-gray-100-dash cursor-pointer w-6 h-6 flex justify-center items-center">
@@ -33,7 +33,7 @@ const MonthlyTargetCard = () => {
           </p>
         </div>
       </div>
-      <div className="py-5 px-[42px] flex items-center justify-between">
+      <div className="py-5 px-[66px] flex items-center justify-between">
         <div className="text-center">
           <small className="text-gray-100-dash leading-[142.857%]">
             Target
@@ -45,6 +45,7 @@ const MonthlyTargetCard = () => {
             </span>
           </p>
         </div>
+        <span className="w-px h-[27px] border-r border-r-border-dash block"></span>
         <div className="text-center">
           <small className="text-gray-100-dash leading-[142.857%]">
             Revenue
@@ -56,11 +57,12 @@ const MonthlyTargetCard = () => {
             </span>
           </p>
         </div>
+        <span className="w-px h-[27px] border-r border-r-border-dash block"></span>
         <div className="text-center">
           <small className="text-gray-100-dash leading-[142.857%]">Today</small>
           <p className="font-semibold text-lg leading-[155.556%] mt-1 flex items-center gap-1">
             $1.5K{" "}
-            <span className="leading-none rotate-180">
+            <span className="leading-none">
               <PiArrowUp className={"size-4"} />
             </span>
           </p>

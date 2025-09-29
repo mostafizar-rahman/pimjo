@@ -60,7 +60,7 @@ const Login = () => {
             </div>
             <div className="pt-9">
               <SocalLogin />
-              <form onSubmit={handleSubmit}>
+              <form onSubmit={handleSubmit} className="mt-8">
                 {error && (
                   <div className="mb-4 p-3 bg-red-100 border border-red-400 text-red-700 rounded">
                     {error}

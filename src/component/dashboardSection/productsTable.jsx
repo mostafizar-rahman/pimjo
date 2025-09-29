@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { StatusBadge } from "./recentOrders";
 
 const ProductsTable = ({ products }) => {
@@ -26,7 +27,7 @@ const ProductsTable = ({ products }) => {
               <td className="w-[226px] py-2">
                 <div className="flex items-center gap-3">
                   <div className="w-[50px] h-[50px] flex-shrink-0 bg-gray-400-dash rounded-md">
-                    {/* <Image width={50} height={50} src={""} alt="img" /> */}
+                    <Image width={50} height={50} src={product.imageUrl} alt="img" />
                   </div>
                   <div className="min-w-0">
                     <div className="font-medium text-sm leading-[142.857%] line-clamp-1">

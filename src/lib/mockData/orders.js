@@ -7,7 +7,7 @@ export const orders = [
     category: "Laptop",
     price: "$2399.00",
     status: "Delivered",
-    imageUrl: "/images/macbook.png",
+    imageUrl: "/images/dashboard-products/img-1.png",
   },
   {
     id: 2,
@@ -16,7 +16,7 @@ export const orders = [
     category: "Watch",
     price: "$879.00",
     status: "Pending",
-    imageUrl: "/images/apple-watch.png",
+    imageUrl: "/images/dashboard-products/img-2.png",
   },
   {
     id: 3,
@@ -25,7 +25,7 @@ export const orders = [
     category: "Smart Phone",
     price: "$1869.00",
     status: "Delivered",
-    imageUrl: "/images/iphone.png",
+    imageUrl: "/images/dashboard-products/img-3.png",
   },
   {
     id: 4,
@@ -34,7 +34,7 @@ export const orders = [
     category: "Electronics",
     price: "$1699.00",
     status: "Canceled",
-    imageUrl: "/images/ipad.png",
+    imageUrl: "/images/dashboard-products/img-4.png",
   },
   {
     id: 5,
@@ -43,7 +43,7 @@ export const orders = [
     category: "Accessories",
     price: "$240.00",
     status: "Delivered",
-    imageUrl: "/images/airpods.png",
+    imageUrl: "/images/dashboard-products/img-5.png",
   },
 
 ];

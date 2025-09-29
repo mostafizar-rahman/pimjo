@@ -20,7 +20,7 @@ export const StatusBadge = ({ status }) => {
 
   return (
     <span
-      className={`px-2 py-0.5 text-xs font-medium rounded-full ${bgColorClass}`}
+      className={`px-2 py-0.5 text-xs font-medium rounded-full leading-[150%] ${bgColorClass}`}
     >
       {status}
     </span>
@@ -29,9 +29,9 @@ export const StatusBadge = ({ status }) => {
 
 const RecentOrders = ({ orders }) => {
   return (
-    <div className="bg-primary md:px-6 px-5 pb-3 rounded-2xl border border-border-dash min-w-0">
-      <div className="py-4 flex items-center justify-between">
-        <h5 className="text-lg font-semibold leading-[155.556%]">
+    <div className="bg-primary md:px-6 px-5 pb-3 rounded-2xl outline outline-border-dash min-w-0">
+      <div className="py-4 flex sm:flex-row flex-col gap-4 sm:items-center justify-between">
+        <h5 className="text-lg font-semibold leading-[1.55555555556]">
           Recent Orders
         </h5>
         <div className="flex gap-3">
@@ -69,13 +69,13 @@ const RecentOrders = ({ orders }) => {
             {orders.map((product, index) => (
               <tr
                 key={product.id}
-                className="border-b border-b-border-secondary-dash last:border-b-0"
+                className="outline-b outline-b-border-secondary-dash last:outline-b-0"
               >
                 {/* Product Info */}
-                <td className="w-[226px] py-2">
+                <td className=" py-2">
                   <div className="flex items-center gap-3">
                     <div className="w-[50px] h-[50px] flex-shrink-0 bg-gray-400-dash rounded-md">
-                      <Image width={50} height={50} src={""} alt="img" />
+                      <Image width={50} height={50} src={product.imageUrl} alt="img" />
                     </div>
                     <div className="min-w-0">
                       <div className="font-medium text-sm leading-[142.857%] line-clamp-1">
@@ -89,17 +89,17 @@ const RecentOrders = ({ orders }) => {
                 </td>
 
                 {/* Category */}
-                <td className="w-[130px] py-2 pl-6 text-sm text-gray-100-dash leading-[142.857%]">
+                <td className=" py-2 pl-6 text-sm text-gray-100-dash leading-[142.857%]">
                   {product.category}
                 </td>
 
                 {/* Price */}
-                <td className="w-[120px] py-2 pl-6 text-sm text-gray-100-dash leading-[142.857%]">
+                <td className=" py-2 pl-6 text-sm text-gray-100-dash leading-[142.857%]">
                   {product.price}
                 </td>
 
                 {/* Status Badge */}
-                <td className="w-[117px] py-2 pl-6">
+                <td className=" py-2 pl-6">
                   <StatusBadge status={product.status} />
                 </td>
               </tr>

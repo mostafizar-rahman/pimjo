@@ -28,11 +28,11 @@ const Sidebar = () => {
   return (
     <div
       className={cn(
-        "px-5 lg:pt-8 pb-5 pt-5 border-r border-r-border-dash bg-primary min-h-screen xl:static fixed  top-[78px] z-50 transition-all duration-500",
-        isSidebarShow ? "left-0" : "-left-full"
+        "px-5 lg:pt-8 pb-5 pt-5 border-r border-r-border-dash bg-primary h-screen xl:sticky xl:top-0 fixed top-[78px] z-50 transition-all duration-500",
+        isSidebarShow ? "left-0 w-[300px]" : "-left-full"
       )}
     >
-      <Link href={"/"}>
+      <Link href={"/"} className="hidden md:block">
         <Image
           width={121}
           height={28}
@@ -41,7 +41,7 @@ const Sidebar = () => {
           className="sm:w-auto w-[103px]"
         />
       </Link>
-      <div className="pt-7">
+      <div className="md:pt-7 pt-5">
         <p className="uppercase leading-[166.667%] text-gray-200-dash text-sm">
           Menu
         </p>

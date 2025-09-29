@@ -4,7 +4,7 @@ import MonthlySalesCard from "@/component/dashboardSection/monthlySalesCard";
 import MonthlyStatistics from "@/component/dashboardSection/monthlyStatistics";
 import MonthlyTargetCard from "@/component/dashboardSection/monthlyTargetCard";
 import RecentOrders from "@/component/dashboardSection/recentOrders";
-import { PiCube, PiUserDash } from "@/lib/icons";
+import { PiCube, PiUserDash, PiUsers } from "@/lib/icons";
 
 async function getStats() {
   const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/stats`, { cache: 'no-store' });
@@ -33,7 +33,7 @@ const Dashboard = async () => {
           <div className="lg:space-y-6 space-y-4">
             <div className="grid sm:grid-cols-2 lg:gap-6 gap-4">
               <MetricCard
-                icon={<PiUserDash />}
+                icon={<PiUsers />}
                 title={"Customers"}
                 value={stats.customers}
                 change="11.0%"
@@ -52,7 +52,7 @@ const Dashboard = async () => {
           <MonthlyTargetCard />
         </div>
         <MonthlyStatistics />
-        <div className="mt-6 gap-6 grid lg:grid-cols-[413fr_665fr]">
+        <div className="lg:mt-6 mt-4 lg:gap-6 gap-4 grid lg:grid-cols-[413fr_665fr]">
           <CustomersDemographic />
           <RecentOrders orders={orders} />
         </div>

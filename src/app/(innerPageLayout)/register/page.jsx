@@ -19,7 +19,7 @@ const Register = () => {
             </div>
             <div className="pt-9">
               <SocalLogin />
-              <form action="">
+              <form action="" className="mt-8">
                 <div>
                   <label
                     htmlFor="email"

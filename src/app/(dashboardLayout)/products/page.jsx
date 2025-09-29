@@ -1,6 +1,7 @@
 import ProductsTable from "@/component/dashboardSection/productsTable";
 import DateRange from "@/component/ui/dateRange";
 import Input from "@/component/ui/input";
+import Pagination from "@/component/ui/pagination";
 import { PiSearch } from "@/lib/icons";
 
 async function getProducts() {
@@ -41,6 +42,9 @@ const Products = async () => {
       </div>
       <div className="md:px-6 px-5">
         <ProductsTable products={products} />
+      </div>
+      <div className="md:px-6 px-5 py-4 border-t border-t-border-dash">
+        <Pagination />
       </div>
     </section>
   );

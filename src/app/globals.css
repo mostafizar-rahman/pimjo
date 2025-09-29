@@ -2,6 +2,9 @@
 
 @custom-variant dark (&:is(.dark *));
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
 
 @theme inline {
   --font-dm-sans: var(--font-dm-sans);

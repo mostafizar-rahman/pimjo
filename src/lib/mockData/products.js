@@ -7,7 +7,7 @@ export const products = [
     category: "Laptop",
     price: "$2399.00",
     status: "Delivered",
-    imageUrl: "/images/macbook.png",
+    imageUrl: "/images/dashboard-products/img-1.png",
   },
   {
     id: 2,
@@ -16,7 +16,7 @@ export const products = [
     category: "Watch",
     price: "$879.00",
     status: "Pending",
-    imageUrl: "/images/apple-watch.png",
+    imageUrl: "/images/dashboard-products/img-2.png",
   },
   {
     id: 3,
@@ -25,7 +25,7 @@ export const products = [
     category: "Smart Phone",
     price: "$1869.00",
     status: "Delivered",
-    imageUrl: "/images/iphone.png",
+    imageUrl: "/images/dashboard-products/img-3.png",
   },
   {
     id: 4,
@@ -34,7 +34,7 @@ export const products = [
     category: "Electronics",
     price: "$1699.00",
     status: "Canceled",
-    imageUrl: "/images/ipad.png",
+    imageUrl: "/images/dashboard-products/img-4.png",
   },
   {
     id: 5,
@@ -43,7 +43,34 @@ export const products = [
     category: "Accessories",
     price: "$240.00",
     status: "Delivered",
-    imageUrl: "/images/airpods.png",
+    imageUrl: "/images/dashboard-products/img-5.png",
   },
-
+  {
+    id: 6,
+    name: 'Macbook pro 13"',
+    variants: "2 Variants",
+    category: "Laptop",
+    price: "$2399.00",
+    status: "Delivered",
+    imageUrl: "/images/dashboard-products/img-1.png",
+  },
+  {
+    id: 7,
+    name: "Apple Watch Ultra",
+    variants: "1 Variants",
+    category: "Watch",
+    price: "$879.00",
+    status: "Pending",
+    imageUrl: "/images/dashboard-products/img-2.png",
+  },
+  {
+    id: 8,
+    name: "iPhone 15 Pro Max",
+    variants: "2 Variants",
+    category: "Smart Phone",
+    price: "$1869.00",
+    status: "Delivered",
+    imageUrl: "/images/dashboard-products/img-3.png",
+  },
 ];
+

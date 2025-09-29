@@ -131,16 +131,16 @@ const AreaChartComponent = ({ data, maxDomain = 1000 }) => (
 
 const MonthlyStatistics = () => {
   return (
-    <div className="bg-primary md:p-6 p-5 rounded-2xl border border-border-dash mt-6">
+    <div className="bg-primary md:p-6 p-5 rounded-2xl outline outline-border-dash lg:mt-6 mt-4">
       <div className="relative">
         <div>
           <Tabs defaultValue="overview">
             <div className="flex items-center justify-between flex-wrap gap-5">
               <div>
-                <h5 className="text-lg font-semibold leading-[155.556%]">
+                <h5 className="text-lg font-semibold leading-[1.55555555556]">
                   Statistics
                 </h5>
-                <p className="mt-1 text-gray-100-dash text-sm leading-[142.857%]">
+                <p className="mt-1 text-gray-100-dash text-sm leading-[1.42857]">
                   Overall performance metrics for each month
                 </p>
               </div>

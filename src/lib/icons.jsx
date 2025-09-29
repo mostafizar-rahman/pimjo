@@ -759,3 +759,24 @@ export const PiCalender = ({ className }) => {
     </svg>
   );
 };
+
+export const PiArrowLeft = ({className}) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={20}
+      height={20}
+      viewBox="0 0 20 20"
+      fill="none"
+      className={className}
+    >
+      <path
+        d="M3.33325 9.99715L16.6677 9.99715M8.32991 5L3.33325 9.99984L8.32991 15"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};
