@@ -2,10 +2,12 @@ import ProductsTable from "@/component/dashboardSection/productsTable";
 import DateRange from "@/component/ui/dateRange";
 import Input from "@/component/ui/input";
 import Pagination from "@/component/ui/pagination";
+import { getBaseUrl } from "@/lib/getBaseUrl";
 import { PiSearch } from "@/lib/icons";
 
 async function getProducts() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/products`, {
+  const baseUrl = await getBaseUrl();
+  const res = await fetch(`${baseUrl}/api/products`, {
     cache: "no-store",
   });
   if (!res.ok) {

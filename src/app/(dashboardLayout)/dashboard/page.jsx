@@ -4,20 +4,27 @@ import MonthlySalesCard from "@/component/dashboardSection/monthlySalesCard";
 import MonthlyStatistics from "@/component/dashboardSection/monthlyStatistics";
 import MonthlyTargetCard from "@/component/dashboardSection/monthlyTargetCard";
 import RecentOrders from "@/component/dashboardSection/recentOrders";
-import { PiCube, PiUserDash, PiUsers } from "@/lib/icons";
+import { getBaseUrl } from "@/lib/getBaseUrl";
+import { PiCube, PiUsers } from "@/lib/icons";
 
 async function getStats() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/stats`, { cache: 'no-store' });
+  const baseUrl = await getBaseUrl();
+  const res = await fetch(`${baseUrl}/api/stats`, {
+    cache: "no-store",
+  });
   if (!res.ok) {
-    throw new Error('Failed to fetch stats')
+    throw new Error("Failed to fetch stats");
   }
   return res.json();
 }
 
 async function getOrders() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/orders`, { cache: 'no-store' });
+  const baseUrl = await getBaseUrl();
+  const res = await fetch(`${baseUrl}/api/orders`, {
+    cache: "no-store",
+  });
   if (!res.ok) {
-    throw new Error('Failed to fetch orders')
+    throw new Error("Failed to fetch orders");
   }
   return res.json();
 }
