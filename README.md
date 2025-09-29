@@ -32,7 +32,7 @@ Make sure you have the following installed on your machine:
 
 1. Clone the repository:
    ```sh
-   git clone <your-repository-url>
+   git clone https://github.com/mostafizar-rahman/pimjo
    ```
 2. Navigate to the project directory:
    ```sh
