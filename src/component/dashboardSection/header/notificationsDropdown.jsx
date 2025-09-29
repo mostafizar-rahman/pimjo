@@ -1,5 +1,5 @@
 "use client";
-import { PiClose, PiNotification } from "@/lib/icons";
+import { PiClose, PiCloseDash, PiNotification } from "@/lib/icons";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 const notifications = [
@@ -79,22 +79,22 @@ const NotificationsDropdown = () => {
     <div ref={dropdownRef} className="relative">
       <button
         onClick={toggleDropdown}
-        className="text-gray-100-dash rounded-full border border-border-dash w-11 h-11 flex justify-center items-center relative "
+        className="text-text-secondary-dash rounded-full border border-border-dash w-11 h-11 flex justify-center items-center relative "
       >
         <PiNotification />
         <span className="block w-2 h-2 bg-[#FD853A] rounded-full absolute right-[3px] top-[3px]"></span>
       </button>
       {showDropdown && (
         <div
-          className={`absolute md:right-0 max-md:left-0 max-sm:-left-[135%] z-30 top-[60px] w-[361px] bg-primary rounded-2xl p-3 border border-border-dash shadow-[0_12px_16px_-4px_rgba(16,24,40,0.08),_0_4px_6px_-2px_rgba(16,24,40,0.03)]`}
+          className={`absolute md:right-0 max-md:left-0 max-sm:-left-[135%] z-30 top-[60px] w-[361px] bg-card-background-dash dark:bg-[#1A2231] rounded-2xl p-3 border border-border-dash shadow-[0_12px_16px_-4px_rgba(16,24,40,0.08),_0_4px_6px_-2px_rgba(16,24,40,0.03)]`}
         >
           <div className="flex justify-between border-b border-b-border-secondary-dash pb-3">
             <h6 className="font-semibold leading-[155.556%]">Notifications</h6>
             <button
               onClick={toggleDropdown}
-              className="w-6 h-6 flex justify-center items-center"
+              className="w-6 h-6 flex justify-center items-center "
             >
-              <PiClose />
+              <PiCloseDash />
             </button>
           </div>
           <div>
@@ -104,7 +104,7 @@ const NotificationsDropdown = () => {
                 {notifications.map((notification) => (
                   <div
                     key={notification.id}
-                    className="p-3 border-b border-b-border-secondary-dash last:border-b-0 hover:bg-gray-400-dash transition-all duration-500"
+                    className="p-3 border-b border-b-border-secondary-dash last:border-b-0 hover:bg-body-secondary-dash transition-all duration-500"
                   >
                     <div className="flex items-start space-x-3">
                       {/* Avatar with status indicator */}
@@ -131,7 +131,7 @@ const NotificationsDropdown = () => {
                           <span className="font-semibold leading-[142.857%]">
                             {notification.name}
                           </span>
-                          <span className="text-gray-100-dash ml-1">
+                          <span className="text-text-secondary-dash ml-1">
                             {notification.action}
                           </span>
                           <span className="font-semibold ml-1">
@@ -139,7 +139,7 @@ const NotificationsDropdown = () => {
                           </span>
                         </p>
 
-                        <div className="mt-1.5 flex items-center space-x-2 text-xs text-gray-100-dash">
+                        <div className="mt-1.5 flex items-center space-x-2 text-xs text-text-secondary-dash">
                           <span>{notification.category}</span>
                           <span className="text-sm">•</span>
                           <span>{notification.time}</span>
@@ -151,7 +151,7 @@ const NotificationsDropdown = () => {
               </div>
 
               <div className="mt-3">
-                <button className="w-full py-3 px-4 text-sm font-medium text-gray-600-dash border border-border-dash shadow-[0_1px_2px_0_rgba(16,24,40,0.05)] rounded-lg hover:bg-gray-50 transition-all duration-500 ">
+                <button className="w-full py-3 px-4 text-sm font-medium text-text-color-dash border border-border-dash shadow-[0_1px_2px_0_rgba(16,24,40,0.05)] rounded-lg hover:bg-gray-50 transition-all duration-500 ">
                   View All Notification
                 </button>
               </div>

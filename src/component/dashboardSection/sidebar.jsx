@@ -29,13 +29,13 @@ const Sidebar = () => {
     <>
       <div
         className={cn(
-          "bg-gray-900-dash fixed w-full h-screen z-40 transition-all duration-300",
+          "bg-[#101828] fixed w-full h-screen z-40 transition-all duration-300",
           isSidebarShow ? "opacity-50 visible" : "opacity-0 invisible"
         )}
       ></div>
       <div
         className={cn(
-          "px-5 lg:pt-8 pb-5 pt-5 border-r border-r-border-dash bg-primary h-screen xl:sticky xl:top-0 fixed top-[78px] z-50 transition-all duration-500",
+          "px-5 lg:pt-8 pb-5 pt-5 border-r border-r-border-dash bg-body-primary-dash h-screen xl:sticky xl:top-0 fixed top-[78px] z-50 transition-all duration-500",
           isSidebarShow ? "left-0 w-[300px]" : "-left-full"
         )}
       >
@@ -45,11 +45,17 @@ const Sidebar = () => {
             height={28}
             src={"/images/logo.png"}
             alt="logo"
-            className="sm:w-auto w-[103px]"
+            className="sm:w-auto w-[103px] dark:hidden block"/>
+          <Image
+            width={121}
+            height={28}
+            src={"/images/logo-light.png"}
+            alt="logo"
+            className="sm:w-auto w-[103px] dark:block hidden"
           />
         </Link>
         <div className="md:pt-7 pt-5">
-          <p className="uppercase leading-[166.667%] text-gray-200-dash text-sm">
+          <p className="uppercase leading-[166.667%] text-text-gray-400-dash text-sm">
             Menu
           </p>
           <ul className="mt-4 space-y-1">
@@ -60,7 +66,9 @@ const Sidebar = () => {
                     href={href}
                     className={cn(
                       "py-2 px-3 rounded-lg text-sm font-medium  hover:text-secondary hover:bg-[#ECF3FF] hover:dark:bg-[#465FFF1F] transition-all duration-500 flex items-center gap-3",
-                      pathName === href ? "text-secondary bg-[#ECF3FF] dark:bg-[#465FFF1F]" : ""
+                      pathName === href
+                        ? "text-secondary bg-[#ECF3FF] dark:bg-[#465FFF1F]"
+                        : ""
                     )}
                   >
                     <span className="w-6 h-6 flex items-center justify-center">

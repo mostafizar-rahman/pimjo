@@ -9,29 +9,29 @@ const Pagination = () => {
           Previous
         </span>
       </button>
-      <small className="font-medium text-gray-600-dash leading-[142%] sm:hidden block">
+      <small className="font-medium text-text-color-dash leading-[142%] sm:hidden block">
         Page 1 of 10
       </small>
       <ul className="hidden sm:flex items-center">
-        <li className="cursor-pointer lg:w-12 lg:h-12 w-10 h-10 bg-secondary rounded-lg flex justify-center items-center text-center text-sm text-primary leading-[142.857%] font-medium hover:bg-secondary hover:text-primary transition-all duration-500">
+        <li className="cursor-pointer lg:w-12 lg:h-12 w-10 h-10 bg-secondary rounded-lg flex justify-center items-center text-center text-sm text-primary leading-[142.857%] dark:text-white dark:hover:text-white font-medium hover:bg-secondary hover:text-primary transition-all duration-500">
           1
         </li>
-        <li className="cursor-pointer lg:w-12 lg:h-12 w-10 h-10 rounded-lg flex justify-center items-center text-center text-sm text-gray-600-dash leading-[142.857%] font-medium hover:bg-secondary hover:text-primary transition-all duration-500">
+        <li className="cursor-pointer lg:w-12 lg:h-12 w-10 h-10 rounded-lg flex justify-center items-center text-center text-sm text-text-color-dash leading-[142.857%] dark:hover:text-white font-medium hover:bg-secondary hover:text-primary transition-all duration-500">
           2
         </li>
-        <li className="cursor-pointer lg:w-12 lg:h-12 w-10 h-10 rounded-lg flex justify-center items-center text-center text-sm text-gray-600-dash leading-[142.857%] font-medium hover:bg-secondary hover:text-primary transition-all duration-500">
+        <li className="cursor-pointer lg:w-12 lg:h-12 w-10 h-10 rounded-lg flex justify-center items-center text-center text-sm text-text-color-dash leading-[142.857%] dark:hover:text-white font-medium hover:bg-secondary hover:text-primary transition-all duration-500">
           3
         </li>
-        <li className="cursor-pointer lg:w-12 lg:h-12 w-10 h-10 rounded-lg flex justify-center items-center text-center text-sm text-gray-600-dash leading-[142.857%] font-medium">
+        <li className="cursor-pointer lg:w-12 lg:h-12 w-10 h-10 rounded-lg flex justify-center items-center text-center text-sm text-text-color-dash leading-[142.857%] font-medium">
           ...
         </li>
-        <li className="cursor-pointer lg:w-12 lg:h-12 w-10 h-10 rounded-lg flex justify-center items-center text-center text-sm text-gray-600-dash leading-[142.857%] font-medium hover:bg-secondary hover:text-primary transition-all duration-500">
+        <li className="cursor-pointer lg:w-12 lg:h-12 w-10 h-10 rounded-lg flex justify-center items-center text-center text-sm text-text-color-dash leading-[142.857%] dark:hover:text-white font-medium hover:bg-secondary hover:text-primary transition-all duration-500">
           8
         </li>
-        <li className="cursor-pointer lg:w-12 lg:h-12 w-10 h-10 rounded-lg flex justify-center items-center text-center text-sm text-gray-600-dash leading-[142.857%] font-medium hover:bg-secondary hover:text-primary transition-all duration-500">
+        <li className="cursor-pointer lg:w-12 lg:h-12 w-10 h-10 rounded-lg flex justify-center items-center text-center text-sm text-text-color-dash leading-[142.857%] dark:hover:text-white font-medium hover:bg-secondary hover:text-primary transition-all duration-500">
           9
         </li>
-        <li className="cursor-pointer lg:w-12 lg:h-12 w-10 h-10 rounded-lg flex justify-center items-center text-center text-sm text-gray-600-dash leading-[142.857%] font-medium hover:bg-secondary hover:text-primary transition-all duration-500">
+        <li className="cursor-pointer lg:w-12 lg:h-12 w-10 h-10 rounded-lg flex justify-center items-center text-center text-sm text-text-color-dash leading-[142.857%] dark:hover:text-white font-medium hover:bg-secondary hover:text-primary transition-all duration-500">
           10
         </li>
       </ul>

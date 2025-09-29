@@ -88,7 +88,7 @@ const SemicircleProgress = ({
         <div className="lg:text-4xl text-3xl lg:leading-[122.222%] font-semibold ">
           {animatedPercentage.toFixed(2)}%
         </div>
-        <div className="mt-2 px-3 py-1 bg-[#ECFDF3] text-[#039855] leading-[142.857%] text-sm font-medium rounded-full">
+        <div className="mt-2 px-3 py-1 bg-success-light-background text-[#039855] leading-[142.857%] text-sm font-medium rounded-full">
           +10%
         </div>
       </div>

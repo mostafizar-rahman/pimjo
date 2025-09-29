@@ -2,7 +2,9 @@
 
 @custom-variant dark (&:is(.dark *));
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -20,16 +22,21 @@
 
 
   /* Dashboard Colors */
-  --color-background-dash: var(--background-dash);
-  --color-foreground-dash: var(--foreground-dash);
-  --color-gray-100-dash: var(--gray-100-dash);
-  --color-gray-200-dash: var(--gray-200-dash);
-  --color-gray-300-dash: var(--gray-300-dash);
-  --color-gray-400-dash: var(--gray-400-dash);
-  --color-gray-600-dash: var(--gray-600-dash);
-  --color-gray-900-dash: var(--gray-900-dash);
+  --color-body-primary-dash: var(--body-primary-dash);
+  --color-body-secondary-dash: var(--body-secondary-dash);
+  --color-card-background-dash: var(--card-background-dash);
+  --color-tab-background-dash: var(--tab-background-dash);
+  --color-tab-text-dash: var(--tab-text-dash);
+  --color-text-title-dash: var(--text-title-dash);
+  --color-text-secondary-dash: var(--text-secondary-dash);
+  --color-text-color-dash: var(--text-color-dash);
+  --color-text-gray-400-dash: var(--text-gray-400-dash);
   --color-border-dash: var(--border-dash);
   --color-border-secondary-dash: var(--border-secondary-dash);
+  --color-button-text-dash: var(--button-text-dash);
+  --color-success-light-background: var(--success-light-background);
+  --color-error-light-background: var(--error-light-background);
+  --color-warning-light-background: var(--warning-light-background);
 }
 
 :root {
@@ -45,16 +52,21 @@
 
 
   /* -------- Dashboard---------- */
-  --background-dash: #F9FAFB;
-  --foreground-dash: #1D2939;
-  --gray-100-dash: #667085;
-  --gray-200-dash: #98A2B3;
-  --gray-300-dash: #F2F4F7;
-  --gray-400-dash: #F9FAFB;
-  --gray-600-dash: #344054;
-  --gray-900-dash: #101828;
+  --body-primary-dash: #FFFFFF;
+  --body-secondary-dash: #F9FAFB;
+  --card-background-dash: #FFFFFF;
+  --tab-background-dash: #F2F4F7;
+  --tab-text-dash: #101828;
+  --text-title-dash: #1D2939;
+  --text-secondary-dash: #667085;
+  --text-color-dash: #344054;
+  --text-gray-400-dash: #98A2B3;
   --border-dash: #E4E7EC;
   --border-secondary-dash: #F2F4F7;
+  --button-text-dash: #344054;
+  --success-light-background: #ECFDF3;
+  --error-light-background: #FEF3F2;
+  --warning-light-background: #FFFAEB;
 }
 
 .dark {
@@ -62,6 +74,24 @@
   --foreground: #ededed;
   --primary: #111827;
   --secondary: #3758F9;
+
+
+  /* -------- Dashboard---------- */
+  --body-primary-dash: #101828;
+  --body-secondary-dash: #101828;
+  --card-background-dash: #ffffff08;
+  --tab-background-dash: #1D2939;
+  --tab-text-dash: #101828;
+  --text-title-dash: #ffffffe6;
+  --text-secondary-dash: #98A2B3;
+  --text-color-dash: #98A2B3;
+  --text-gray-400-dash: #98A2B3;
+  --border-dash: #1D2939;
+  --border-secondary-dash: #1D2939;
+  --button-text-dash: #344054;
+  --success-light-background: #12b76a26;
+  --error-light-background: #f0443826;
+  --warning-light-background: #f7900926;
 }
 
 @layer base {

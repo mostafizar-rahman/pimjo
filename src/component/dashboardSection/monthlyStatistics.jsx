@@ -80,13 +80,13 @@ const AreaChartComponent = ({ data, maxDomain = 1000 }) => (
           dataKey="name"
           axisLine={false}
           tickLine={false}
-          tick={{ fontSize: 12, fill: "#6B7280" }}
+          tick={{ fontSize: 12, fill: `var(--text-color-dash)` }}
           dy={8}
         />
         <YAxis
           axisLine={false}
           tickLine={false}
-          tick={{ fontSize: 12, fill: "#6B7280" }}
+          tick={{ fontSize: 12, fill: `var(--text-color-dash)` }}
           domain={[0, maxDomain]}
           tickCount={6}
         />
@@ -102,10 +102,10 @@ const AreaChartComponent = ({ data, maxDomain = 1000 }) => (
           cursor={false}
         />
         <CartesianGrid
-          strokeDasharray="1 1"
+          strokeDasharray="0.5 0"
           horizontal={true}
           vertical={false}
-          stroke="#E5E7EB"
+          stroke={`var(--border-secondary-dash)`}
         />
 
         <Area
@@ -131,7 +131,7 @@ const AreaChartComponent = ({ data, maxDomain = 1000 }) => (
 
 const MonthlyStatistics = () => {
   return (
-    <div className="bg-primary md:p-6 p-5 rounded-2xl outline outline-border-dash lg:mt-6 mt-4">
+    <div className="bg-card-background-dash md:p-6 p-5 rounded-2xl outline outline-border-dash lg:mt-6 mt-4">
       <div className="relative">
         <div>
           <Tabs defaultValue="overview">
@@ -140,7 +140,7 @@ const MonthlyStatistics = () => {
                 <h5 className="text-lg font-semibold leading-[1.55555555556]">
                   Statistics
                 </h5>
-                <p className="mt-1 text-gray-100-dash text-sm leading-[1.42857]">
+                <p className="mt-1 text-text-secondary-dash text-sm leading-[1.42857]">
                   Overall performance metrics for each month
                 </p>
               </div>

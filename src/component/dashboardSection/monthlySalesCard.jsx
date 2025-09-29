@@ -27,12 +27,12 @@ const data = [
 
 const MonthlySalesCard = () => {
   return (
-    <div className="bg-primary md:p-6 p-5 rounded-2xl outline outline-border-dash min-w-0">
+    <div className="bg-card-background-dash md:p-6 p-5 rounded-2xl outline outline-border-dash min-w-0">
       <div className="flex items-center justify-between">
         <h5 className="text-lg font-semibold leading-[1.55555555556]">
           Monthly Sales
         </h5>
-        <span className="text-gray-100-dash cursor-pointer w-6 h-6 flex justify-center items-center">
+        <span className="text-text-secondary-dash cursor-pointer w-6 h-6 flex justify-center items-center">
           <PiThreeDot />
         </span>
       </div>
@@ -46,13 +46,13 @@ const MonthlySalesCard = () => {
               dataKey="name"
               axisLine={false}
               tickLine={false}
-              tick={{ fontSize: 12, fill: "#344054" }}
+              tick={{ fontSize: 12, fill: `var(--text-color-dash)` }}
               dy={8}
             />
             <YAxis
               axisLine={false}
               tickLine={false}
-              tick={{ fontSize: 12, fill: "#344054" }}
+              tick={{ fontSize: 12, fill: `var(--text-color-dash)` }}
               domain={[0, 800]}
             />
             <Tooltip
@@ -68,7 +68,7 @@ const MonthlySalesCard = () => {
             />
             <CartesianGrid
               strokeDasharray="0.5 0"
-              stroke="#F2F4F7"
+              stroke={`var(--border-secondary-dash)`}
               horizontal={true}
               vertical={false}
             />
@@ -76,7 +76,7 @@ const MonthlySalesCard = () => {
               dataKey="sales"
               radius={[8, 8, 0, 0]}
               barSize={20}
-              fill="#E5E7EB"
+              fill={`var(--border-secondary-dash)`}
               activeBar={{ fill: "#3B82F6" }}
             ></Bar>
           </BarChart>

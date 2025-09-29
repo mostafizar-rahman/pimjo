@@ -4,21 +4,21 @@ import ProgressBar from "../ui/progressBar";
 
 const CustomersDemographic = () => {
   return (
-    <div className="bg-primary md:p-6 p-5 rounded-2xl outline outline-border-dash">
+    <div className="bg-card-background-dash md:p-6 p-5 rounded-2xl outline outline-border-dash">
       <div>
         <div className="flex items-center justify-between">
           <h5 className="text-lg font-semibold leading-[1.55555555556]">
             Customers Demographic
           </h5>
-          <span className="text-gray-100-dash cursor-pointer w-6 h-6 flex justify-center items-center">
+          <span className="text-text-secondary-dash cursor-pointer w-6 h-6 flex justify-center items-center">
             <PiThreeDot />
           </span>
         </div>
-        <p className="mt-1 text-gray-100-dash text-sm leading-[142.857%]">
+        <p className="mt-1 text-text-secondary-dash text-sm leading-[142.857%]">
           Number of customer based on country
         </p>
       </div>
-      <div className="mt-6 outline outline-border-dash bg-gray-400-dash rounded-2xl px-[23.33px] pt-[25.5px] pb-[11.5px]">
+      <div className="mt-6 outline outline-border-dash bg-body-secondary-dash rounded-2xl px-[23.33px] pt-[25.5px] pb-[11.5px]">
         <Image
           width={318}
           height={169}
@@ -61,7 +61,7 @@ function Card({ image, name, totalCustomers, progressValue }) {
         />
         <div>
           <p className="font-semibold text-sm leading-[142.857%]">{name}</p>
-          <small className="text-xs text-gray-100-dash leading-[150%] block">
+          <small className="text-xs text-text-secondary-dash leading-[150%] block">
             {totalCustomers} Customers
           </small>
         </div>

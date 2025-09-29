@@ -3,18 +3,18 @@ import SemicircleProgress from "../ui/semicircleProgress";
 
 const MonthlyTargetCard = () => {
   return (
-    <div className="bg-gray-300-dash outline outline-border-dash rounded-2xl">
-      <div className="bg-primary md:p-6 p-5 md:pb-8 pb-6 rounded-2xl ">
+    <div className="bg-tab-background-dash outline outline-border-dash rounded-2xl">
+      <div className="bg-body-primary-dash md:p-6 p-5 md:pb-8 pb-6 rounded-2xl ">
         <div>
           <div className="flex items-center justify-between">
             <h5 className="text-lg font-semibold leading-[1.55555555556]">
               Monthly Target
             </h5>
-            <span className="text-gray-100-dash cursor-pointer w-6 h-6 flex justify-center items-center">
+            <span className="text-text-secondary-dash cursor-pointer w-6 h-6 flex justify-center items-center">
               <PiThreeDot />
             </span>
           </div>
-          <p className="mt-1 text-gray-100-dash text-sm leading-[142.857%]">
+          <p className="mt-1 text-text-secondary-dash text-sm leading-[142.857%]">
             Target you’ve set for each month
           </p>
         </div>
@@ -27,7 +27,7 @@ const MonthlyTargetCard = () => {
             primaryColor="#3758F9"
             backgroundColor="#E4E7EC"
           />
-          <p className="text-gray-100-dash mt-7 text-center">
+          <p className="text-text-secondary-dash mt-7 text-center">
             You earn $3287 today, its higher than last month. Keep up your good
             work!
           </p>
@@ -35,7 +35,7 @@ const MonthlyTargetCard = () => {
       </div>
       <div className="py-5 lg:px-[66px] md:px-10 px-6 flex items-center justify-between">
         <div className="text-center">
-          <small className="text-gray-100-dash leading-[142.857%]">
+          <small className="text-text-secondary-dash leading-[142.857%]">
             Target
           </small>
           <p className="font-semibold text-lg leading-[155.556%] mt-1 flex items-center gap-1">
@@ -47,7 +47,7 @@ const MonthlyTargetCard = () => {
         </div>
         <span className="w-px h-[27px] border-r border-r-border-dash block"></span>
         <div className="text-center">
-          <small className="text-gray-100-dash leading-[142.857%]">
+          <small className="text-text-secondary-dash leading-[142.857%]">
             Revenue
           </small>
           <p className="font-semibold text-lg leading-[155.556%] mt-1 flex items-center gap-1">
@@ -59,7 +59,9 @@ const MonthlyTargetCard = () => {
         </div>
         <span className="w-px h-[27px] border-r border-r-border-dash block"></span>
         <div className="text-center">
-          <small className="text-gray-100-dash leading-[142.857%]">Today</small>
+          <small className="text-text-secondary-dash leading-[142.857%]">
+            Today
+          </small>
           <p className="font-semibold text-lg leading-[155.556%] mt-1 flex items-center gap-1">
             $1.5K{" "}
             <span className="leading-none">

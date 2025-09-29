@@ -20,20 +20,20 @@ const Products = async () => {
   const products = await getProducts();
 
   return (
-    <section className="rounded-2xl border border-border-dash bg-primary">
+    <section className="rounded-2xl border border-border-dash bg-card-background-dash">
       <div className="md:px-6 px-5 py-4 flex sm:flex-row flex-col sm:items-center justify-between gap-4">
         <h5 className="text-lg font-semibold leading-[155.556%] flex-1">
           All products
         </h5>
         <div className="flex items-center sm:justify-end gap-3 flex-1">
           <div className="relative w-full max-w-[300px] shrink-0">
-            <span className="text-gray-200-dash absolute left-4 top-1/2 -translate-y-1/2">
+            <span className="text-text-gray-400-dash absolute left-4 top-1/2 -translate-y-1/2">
               <PiSearch />
             </span>
             <Input
               placeholder={"Search..."}
               className={
-                "pl-11 w-full text-gray-200-dash placeholder:text-gray-200-dash rounded-lg"
+                "pl-11 w-full text-text-gray-400-dash placeholder:text-text-gray-400-dash rounded-lg border-border-dash bg-card-background-dash"
               }
             />
           </div>

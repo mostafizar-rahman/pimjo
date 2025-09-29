@@ -1,4 +1,5 @@
 "use client";
+import { cn } from "@/lib/utils";
 import { createContext, useContext, useState } from "react";
 
 const TabsContext = createContext(null);
@@ -18,7 +19,10 @@ export const Tabs = ({ defaultValue, children, className = "" }) => {
 export const TabsList = ({ children, className = "" }) => {
   return (
     <div
-      className={`inline-flex items-center justify-center rounded-lg p-0.5 bg-gray-300-dash ${className}`}
+      className={cn(
+        `inline-flex items-center justify-center rounded-lg p-0.5 bg-tab-background-dash dark:bg-[#101828]`,
+        className
+      )}
     >
       {children}
     </div>
@@ -31,10 +35,10 @@ export const TabsTrigger = ({ value, children, className = "" }) => {
 
   return (
     <button
-      className={`inline-flex items-center justify-center whitespace-nowrap rounded-md px-3 py-2.5 text-sm font-medium text-gray-100-dash transition-all disabled:pointer-events-none disabled:opacity-50 ${
+      className={`inline-flex items-center justify-center whitespace-nowrap rounded-md px-3 py-2.5 text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 ${
         isActive
-          ? "bg-primary text-gray-900-dash shadow-[0_1px_2px_0_rgba(16,24,40,0.05)]"
-          : "hover:bg-primary hover:text-gray-900-dash hover:shadow-[0_1px_2px_0_rgba(16,24,40,0.05)]"
+          ? "bg-white dark:bg-[#1D2939] dark:text-white text-tab-text-dash shadow-[0_1px_2px_0_rgba(16,24,40,0.05)]"
+          : "hover:bg-white hover:dark:bg-[#1D2939] dark:hover:text-white hover:text-tab-text-dash hover:shadow-[0_1px_2px_0_rgba(16,24,40,0.05)] text-text-secondary-dash"
       } ${className}`}
       onClick={() => setActiveTab(value)}
       data-state={isActive ? "active" : "inactive"}
