@@ -5,7 +5,7 @@ import Image from "next/image";
 const AdsBanner = () => {
   return (
     <section className="bg-primary ">
-      <div className="max-w-[1440px] mx-auto p-11">
+      <div className="max-w-[1440px] mx-auto sm:px-11 sm:py-11 px-4 py-16">
         <div className="grid lg:grid-cols-3 sm:grid-cols-2 gap-5">
           <div className="rounded-2xl">
             <Image

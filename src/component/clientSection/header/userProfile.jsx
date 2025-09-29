@@ -19,12 +19,6 @@ const UserProfile = () => {
           >
             <PiUser />
           </Link>
-          <button
-            onClick={handleLogout}
-            className="text-sm text-gray-700 hover:text-secondary transition-all duration-500"
-          >
-            Logout
-          </button>
         </div>
       ) : (
         <Link

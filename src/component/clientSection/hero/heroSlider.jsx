@@ -56,8 +56,8 @@ const HeroSlider = () => {
       >
         {data.map(({ description, id, image, price, subTItle, title }) => (
           <SwiperSlide key={id}>
-            <div className="flex justify-between items-center">
-              <div className="max-w-[398px]">
+            <div className="flex lg:flex-row flex-col justify-between items-center gap-y-11">
+              <div className="md:max-w-[398px] text-center lg:text-left">
                 <small className="font-medium leading-[142.857%] uppercase text-gray-200">
                   {subTItle}
                 </small>
@@ -67,7 +67,7 @@ const HeroSlider = () => {
                 <p className="mt-3 tracking-[-0.2px] text-gray-200">
                   {description}
                 </p>
-                <Button asChild className={"mt-12 max-w-[147px] w-full"}>
+                <Button asChild className={"lg:mt-12 mt-8 lg:max-w-[147px] w-full"}>
                   <Link href={"#"}>Buy Now ${price}</Link>
                 </Button>
               </div>
@@ -84,7 +84,7 @@ const HeroSlider = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-      <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex items-center gap-[5px] hero-pagination [&_.hero-pagination-btn]:block [&_.hero-pagination-btn]:w-4 [&_.hero-pagination-btn]:h-1 [&_.hero-pagination-btn]:bg-primary [&_.hero-pagination-btn]:opacity-30 [&_.hero-pagination-btn]:rounded-[11px] [&_.hero-pagination-active]:!opacity-100"></div>
+      <div className="absolute lg:bottom-12 bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-[5px] hero-pagination [&_.hero-pagination-btn]:block [&_.hero-pagination-btn]:w-4 [&_.hero-pagination-btn]:h-1 [&_.hero-pagination-btn]:bg-primary [&_.hero-pagination-btn]:opacity-30 [&_.hero-pagination-btn]:rounded-[11px] [&_.hero-pagination-active]:!opacity-100"></div>
     </>
   );
 };

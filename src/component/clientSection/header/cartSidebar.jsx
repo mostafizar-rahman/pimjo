@@ -27,7 +27,7 @@ const CartSidebar = () => {
       </div>
       <div
         className={cn(
-          "fixed top-0  h-screen bg-primary border-r border-r-border w-full max-w-[360px] transition-all duration-300",
+          "fixed top-0 z-50 h-screen bg-primary border-r border-r-border w-full max-w-[360px] transition-all duration-300",
           cartSidebarShow ? "right-0" : "-right-full"
         )}
       >
