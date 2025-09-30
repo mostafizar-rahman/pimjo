@@ -10,6 +10,7 @@ import {
 } from "@/lib/icons";
 import { cn } from "@/lib/utils";
 import { ToggleContext } from "@/providers/dashboardToggleProvider";
+import { useTheme } from "@/providers/themeProvider";
 import Image from "next/image";
 import Link from "next/link";
 import { useContext, useState } from "react";
@@ -19,16 +20,8 @@ import ProfileDropdown from "./profileDropdown";
 const Header = () => {
   const { isSidebarShow, setIsSidebarShow } = useContext(ToggleContext);
   const [userActionsShow, setUserActionsShow] = useState(false);
-  const [isDark, setIsDark] = useState(false);
-  const handleMoodToggler = () => {
-    if (isDark) {
-      setIsDark(false);
-      document.querySelector("body").classList.remove("dark");
-    } else {
-      setIsDark(true);
-      document.querySelector("body").classList.add("dark");
-    }
-  };
+  const { theme, toggleTheme } = useTheme();
+
   return (
     <div className="sticky top-0 z-50">
       <div className="lg:px-6 px-3 py-4 border-b border-b-border-dash bg-body-primary-dash">
@@ -53,7 +46,9 @@ const Header = () => {
               </span>
               <Input
                 placeholder={"Search or type command..."}
-                className={"pl-12 w-full rounded-lg border-border-dash bg-body-primary-dash"}
+                className={
+                  "pl-12 w-full rounded-lg border-border-dash bg-body-primary-dash"
+                }
               />
               <div className="w-[38px] h-[27px] text-xs text-text-secondary-dash tracking-[-0.2px] flex justify-center items-center text-center border border-border-dash rounded-lg absolute right-2.5 top-1/2 -translate-y-1/2">
                 ⌘ K
@@ -68,7 +63,14 @@ const Header = () => {
               height={24}
               src={"/images/logo.png"}
               alt="logo"
-              className="w-[103px]"
+              className="w-[103px] dark:hidden block"
+            />
+            <Image
+              width={104}
+              height={24}
+              src={"/images/logo-light.png"}
+              alt="logo"
+              className="w-[103px] dark:block hidden"
             />
           </Link>
           <button
@@ -85,10 +87,10 @@ const Header = () => {
           <div className="hidden md:flex items-center justify-end gap-4 w-full">
             <div className="flex items-center gap-3">
               <button
-                onClick={handleMoodToggler}
+                onClick={toggleTheme}
                 className="text-text-secondary-dash rounded-full border border-border-dash w-11 h-11 flex justify-center items-center"
               >
-                {isDark ? <PiSun /> : <PiMoon />}
+                {theme === "dark" ? <PiSun /> : <PiMoon />}
               </button>
               <NotificationsDropdown />
             </div>
@@ -107,8 +109,11 @@ const Header = () => {
           )}
         >
           <div className="flex items-center gap-3">
-            <button className="text-text-secondary-dash rounded-full border border-border-dash w-11 h-11 flex justify-center items-center">
-              <PiMoon />
+            <button
+              onClick={toggleTheme}
+              className="text-text-secondary-dash rounded-full border border-border-dash w-11 h-11 flex justify-center items-center"
+            >
+              {theme === "dark" ? <PiSun /> : <PiMoon />}
             </button>
             <NotificationsDropdown />
           </div>
