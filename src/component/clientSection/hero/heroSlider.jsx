@@ -61,7 +61,7 @@ const HeroSlider = () => {
                 <small className="font-medium leading-[142.857%] uppercase text-gray-200">
                   {subTItle}
                 </small>
-                <Title asChild size={"36"} className={"mt-5 text-primary"}>
+                <Title asChild size={"36"} className={"mt-5 text-primary dark:text-foreground"}>
                   <h1>{title}</h1>
                 </Title>
                 <p className="mt-3 tracking-[-0.2px] text-gray-200">

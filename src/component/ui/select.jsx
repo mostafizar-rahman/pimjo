@@ -81,7 +81,7 @@ export const SelectTrigger = ({ children, className }) => {
       disabled={disabled}
       className={cn(
         `
-        flex w-full items-center justify-between gap-1.5 text-primary text-sm tracking-[-0.2px] leading-[142.857%] disabled:cursor-not-allowed disabled:opacity-50
+        flex w-full items-center justify-between gap-1.5 text-primary dark:text-foreground text-sm tracking-[-0.2px] leading-[142.857%] disabled:cursor-not-allowed disabled:opacity-50
         hover:text-gray-200 shadow-[0_1px_2px_0_rgba(16,24,40,0.05)] rounded-lg
         transition-all
       `,
@@ -115,7 +115,7 @@ export const SelectContent = ({ children }) => {
   const { isOpen } = React.useContext(SelectContext);
   return isOpen ? (
     <div className="absolute top-full left-0 z-50 w-full mt-1 animate-in fade-in-0 zoom-in-95 min-w-[200px]">
-      <div className="relative rounded-md border border-slate-200 bg-white p-1 shadow-md">
+      <div className="relative rounded-md border border-border bg-background p-1 shadow-md">
         <div className="max-h-60 overflow-auto">{children}</div>
       </div>
     </div>
@@ -134,9 +134,9 @@ export const SelectItem = ({ value, children, disabled = false }) => {
         ${
           disabled
             ? "pointer-events-none opacity-50"
-            : "hover:bg-slate-200 focus:bg-slate-200"
+            : "hover:bg-slate-200 dark:hover:bg-slate-800 focus:bg-slate-200 dark:focus:bg-slate-800"
         }
-        ${isSelected ? "bg-slate-200" : ""}
+        ${isSelected ? "bg-slate-200 dark:bg-slate-800" : ""}
       `}
       onClick={() => !disabled && handleSelect(value, children)}
     >

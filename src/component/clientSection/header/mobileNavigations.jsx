@@ -18,7 +18,7 @@ const MobileNavigations = ({ navItems }) => {
       <div
         onClick={() => setIsMenuOpen(false)}
         className={cn(
-          "fixed top-0 left-0 z-40 bg-gray-700/70 w-full h-full transition-all duration-500",
+          "fixed top-0 left-0 z-40 bg-gray-700/70 dark:bg-gray-800/50 w-full h-full transition-all duration-500",
           isMenuOpen ? "left-0" : "-left-full"
         )}
       ></div>
@@ -52,7 +52,7 @@ const MobileNavigations = ({ navItems }) => {
                       ? "bg-[#EF444426] text-[#EF4444]"
                       : "",
                     badge.variant === "info"
-                      ? "bg-[#EFF6FF] text-[#1D4ED8]"
+                      ? "bg-[#EFF6FF] dark:bg-[#12b76a26] text-[#1D4ED8]"
                       : ""
                   )}
                 >

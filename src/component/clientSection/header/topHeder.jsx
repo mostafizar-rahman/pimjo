@@ -65,11 +65,11 @@ const TopHeder = () => {
               </Select>
             </div>
           </div>
-          <p className="text-primary leading-[143%] tracking-[-0.2px] text-sm">
+          <p className="text-primary dark:text-foreground leading-[143%] tracking-[-0.2px] text-sm">
             Flash Sale Live – <strong className="font-medium">30% Off</strong>{" "}
             Everything
           </p>
-          <div className="hidden md:flex items-center gap-1 text-primary leading-[143%] tracking-[-0.2px] text-sm">
+          <div className="hidden md:flex items-center gap-1 text-primary dark:text-foreground leading-[143%] tracking-[-0.2px] text-sm">
             {session ? (
               <Link
                 href={"/dashboard"}

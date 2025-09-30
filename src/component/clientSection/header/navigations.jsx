@@ -20,7 +20,7 @@ const Navigations = ({ navItems }) => {
                   badge.variant === "danger"
                     ? "bg-[#EF444426] text-[#EF4444]"
                     : "",
-                  badge.variant === "info" ? "bg-[#EFF6FF] text-[#1D4ED8]" : ""
+                  badge.variant === "info" ? "bg-[#EFF6FF] dark:bg-[#12b76a26] text-[#1D4ED8]" : ""
                 )}
               >
                 {badge?.text}

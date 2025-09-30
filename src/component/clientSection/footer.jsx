@@ -87,6 +87,14 @@ const Footer = () => {
                       height={28}
                       src={"/images/logo.png"}
                       alt="logo"
+                      className="dark:hidden block"
+                    />
+                    <Image
+                      width={120}
+                      height={28}
+                      src={"/images/logo-light.png"}
+                      alt="logo"
+                      className="dark:block hidden"
                     />
                   </Link>
                   <p className="mt-6 tracking-[-0.2px] text-gray-100">

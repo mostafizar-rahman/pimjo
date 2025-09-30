@@ -8,7 +8,7 @@ const Testimonial = () => {
       <div className="container">
         <div className="xl:px-8">
           <div>
-            <div className="px-[14px] py-1 rounded-lg font-medium tracking-[-0.2px] leading-[142.857%] bg-[#EFF6FF] text-[#1D4ED8] inline-flex mb-4">
+            <div className="px-[14px] py-1 rounded-lg font-medium tracking-[-0.2px] leading-[142.857%] bg-[#EFF6FF] dark:bg-[#12b76a26] text-[#1D4ED8] inline-flex mb-4">
               Testimonial
             </div>
             <Title size={"48"} className={"max-w-[640px]"}>

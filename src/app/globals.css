@@ -70,10 +70,22 @@
 }
 
 .dark {
-  --background: #0a0a0a;
-  --foreground: #ededed;
-  --primary: #111827;
-  --secondary: #3758F9;
+  --background: #101828;
+  /* Darker background */
+  --foreground: #bdbfc2;
+  /* Light text */
+  --primary: #121b2c;
+  /* Dark cards */
+  --secondary: #4F7EFF;
+  /* Slightly brighter blue */
+  --gray-100: #888a8d;
+  /* Light gray */
+  --gray-200: #9CA3AF;
+  /* Mid gray */
+  --gray-700: #b7bac0;
+  /* Darker gray */
+  --gray-900: #101828;
+  --border: #1D2939;
 
 
   /* -------- Dashboard---------- */

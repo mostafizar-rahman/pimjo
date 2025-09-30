@@ -20,7 +20,7 @@ const CartSidebar = () => {
       >
         <PiShoppingCart />
         {getCartCount() > 0 && (
-          <div className="absolute -top-2 -right-2 w-[18px] h-[18px] border border-primary rounded-2xl bg-[#1D4ED8] text-center flex justify-center items-center text-[10px] font-medium text-primary tracking-[-0.2px]">
+          <div className="absolute -top-2 -right-2 w-[18px] h-[18px] border border-primary rounded-2xl bg-[#1D4ED8] dark:text-white text-center flex justify-center items-center text-[10px] font-medium text-primary tracking-[-0.2px]">
             {getCartCount()}
           </div>
         )}
