@@ -1,8 +1,7 @@
 "use client";
-import { PiCube, PiDashboard } from "@/lib/icons";
+import { PiCube, PiDashboard, PiLogo } from "@/lib/icons";
 import { cn } from "@/lib/utils";
 import { ToggleContext } from "@/providers/dashboardToggleProvider";
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useContext } from "react";
@@ -18,7 +17,7 @@ const NavList = [
     id: 2,
     href: "/dashboard/products",
     label: "Products",
-    icon: <PiCube className={"w-4 h-[18px]"} />,
+    icon: <PiCube />,
   },
 ];
 
@@ -33,29 +32,20 @@ const Sidebar = () => {
           isSidebarShow ? "opacity-50 visible" : "opacity-0 invisible"
         )}
       ></div>
-      <div
+      <aside
         className={cn(
           "px-5 lg:pt-8 pb-5 pt-5 border-r border-r-border-dash bg-body-primary-dash h-screen xl:sticky xl:top-0 fixed top-[78px] z-50 transition-all duration-500",
           isSidebarShow ? "left-0 w-[300px]" : "-left-full"
         )}
       >
-        <Link href={"/"} className="hidden md:block">
-          <Image
-            width={121}
-            height={28}
-            src={"/images/logo.png"}
-            alt="logo"
-            className="sm:w-auto w-[103px] dark:hidden block"/>
-          <Image
-            width={121}
-            height={28}
-            src={"/images/logo-light.png"}
-            alt="logo"
-            className="sm:w-auto w-[103px] dark:block hidden"
-          />
+        <Link
+          href={"/"}
+          className="hidden md:block text-[#232939] dark:text-white"
+        >
+          <PiLogo />
         </Link>
         <div className="md:pt-7 pt-5">
-          <p className="uppercase leading-[166.667%] text-text-gray-400-dash text-sm">
+          <p className="uppercase leading-sm text-text-gray-400-dash text-xs font-outfit">
             Menu
           </p>
           <ul className="mt-4 space-y-1">
@@ -65,23 +55,23 @@ const Sidebar = () => {
                   <Link
                     href={href}
                     className={cn(
-                      "py-2 px-3 rounded-lg text-sm font-medium  hover:text-secondary hover:bg-[#ECF3FF] hover:dark:bg-[#465FFF1F] transition-all duration-500 flex items-center gap-3",
+                      "py-2 px-3 rounded-lg text-sm font-medium leading-sm transition-all duration-500 flex items-center gap-3",
                       pathName === href
                         ? "text-secondary bg-[#ECF3FF] dark:bg-[#465FFF1F]"
-                        : ""
+                        : "text-text-color-dash hover:text-secondary hover:bg-[#ECF3FF] hover:dark:bg-[#465FFF1F] hover:[&_svg]:text-secondary [&_svg]:text-text-secondary-dash"
                     )}
                   >
                     <span className="w-6 h-6 flex items-center justify-center">
                       {icon}
                     </span>
-                    <span className=" leading-[142.857%]">{label}</span>
+                    <span>{label}</span>
                   </Link>
                 </li>
               );
             })}
           </ul>
         </div>
-      </div>
+      </aside>
     </>
   );
 };

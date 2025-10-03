@@ -6,14 +6,34 @@ const ProductsTable = ({ products }) => {
     <div className="overflow-x-auto">
       <table className="min-w-[600px] w-full">
         <thead>
-          <tr className="text-text-secondary-dash leading-[150%] font-medium border-b border-b-border-secondary-dash border-t border-t-border-secondary-dash text-xs">
-            <th className="w-[226px] py-3 text-left font-medium">Products</th>
-            <th className="lg:w-[55%] w-[35%] py-3 pl-6 text-left font-medium">
-              Category
+          <tr className="border-b border-b-border-secondary-dash border-t border-t-border-secondary-dash ">
+            <th className="w-[226px] text-left">
+              <div className="py-3 pr-6">
+                <p className="text-text-secondary-dash leading-[18px] font-medium text-xs">
+                  Products
+                </p>
+              </div>
             </th>
-            <th className="w-[120px] py-3 pl-6 text-left font-medium">Price</th>
-            <th className="w-[117px] py-3 pl-6 text-left font-medium">
-              Status
+            <th className="lg:w-[55%] w-[35%] text-left">
+              <div className="py-3 px-6">
+                <p className="text-text-secondary-dash leading-[18px] font-medium text-xs">
+                  Category
+                </p>
+              </div>
+            </th>
+            <th className="w-[120px] text-left">
+              <div className="py-3 px-6">
+                <p className="text-text-secondary-dash leading-[18px] font-medium text-xs">
+                  Price
+                </p>
+              </div>
+            </th>
+            <th className="w-[117px] text-left">
+              <div className="py-3 pl-6">
+                <p className="text-text-secondary-dash leading-[18px] font-medium text-xs">
+                  Status
+                </p>
+              </div>
             </th>
           </tr>
         </thead>
@@ -24,8 +44,8 @@ const ProductsTable = ({ products }) => {
               className="border-b border-b-border-secondary-dash last:border-b-0"
             >
               {/* Product Info */}
-              <td className="w-[226px] py-2">
-                <div className="flex items-center gap-3">
+              <td>
+                <div className="flex items-center gap-3 py-2 pr-6 h-[65px]">
                   <div className="w-[50px] h-[50px] flex-shrink-0 bg-body-secondary-dash rounded-md">
                     <Image
                       width={50}
@@ -35,10 +55,10 @@ const ProductsTable = ({ products }) => {
                     />
                   </div>
                   <div className="min-w-0">
-                    <div className="font-medium text-sm leading-[142.857%] line-clamp-1">
+                    <div className="font-medium text-sm leading-sm line-clamp-1">
                       {product.name}
                     </div>
-                    <div className="text-xs text-text-secondary-dash leading-[150%]">
+                    <div className="text-xs text-text-secondary-dash leading-[18px]">
                       {product.variants}
                     </div>
                   </div>
@@ -46,18 +66,28 @@ const ProductsTable = ({ products }) => {
               </td>
 
               {/* Category */}
-              <td className="w-[130px] py-2 pl-6 text-sm text-text-secondary-dash leading-[142.857%]">
-                {product.category}
+              <td>
+                <div className="py-2 px-6 flex items-center h-[65px]">
+                  <p className="text-sm text-text-secondary-dash leading-sm">
+                    {product.category}
+                  </p>
+                </div>
               </td>
 
               {/* Price */}
-              <td className="w-[120px] py-2 pl-6 text-sm text-text-secondary-dash leading-[142.857%]">
-                {product.price}
+              <td>
+                <div className="py-2 px-6 flex items-center h-[65px]">
+                  <p className="text-sm text-text-secondary-dash leading-sm">
+                    {product.price}
+                  </p>
+                </div>
               </td>
 
               {/* Status Badge */}
-              <td className="w-[117px] py-2 pl-6">
-                <StatusBadge status={product.status} />
+              <td>
+                <div className="py-2 pl-6 flex items-center h-[65px]">
+                  <StatusBadge status={product.status} />
+                </div>
               </td>
             </tr>
           ))}

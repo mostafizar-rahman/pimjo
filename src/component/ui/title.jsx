@@ -5,8 +5,8 @@ const titleVariants = cva("font-semibold", {
 
   variants: {
     size: {
-      "36": "text-[clamp(1.75rem,1.5543rem+0.8696vw,2.25rem)] leading-[111.111%]",
-      "48": "text-[clamp(2.25rem,1.9565rem+1.3043vw,3rem)] leading-[108.333%]",
+      "36": "text-[clamp(1.75rem,1.5543rem+0.8696vw,2.25rem)] leading-4xl",
+      "48": "text-[clamp(2.25rem,1.9565rem+1.3043vw,3rem)] leading-5xl",
     },
   },
   defaultVariants: {

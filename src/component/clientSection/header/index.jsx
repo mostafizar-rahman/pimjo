@@ -1,5 +1,4 @@
-import { PiHeart, PiSearch } from "@/lib/icons";
-import Image from "next/image";
+import { PiHeart, PiLogo, PiSearch } from "@/lib/icons";
 import Link from "next/link";
 import CartSidebar from "./cartSidebar";
 import MobileNavigations from "./mobileNavigations";
@@ -42,24 +41,11 @@ const Header = () => {
       <TopHeder />
       <header className="bg-primary py-[26px] border-b border-b-[#E5E7EB] dark:border-b-[#252a36] max-h-20">
         <div className="container">
-          <div className="flex justify-between items-center">
+          <div className="xl:px-8 flex justify-between items-center">
             <div className="flex items-center gap-[22px]">
               <MobileNavigations navItems={navItems} />
-              <Link href={"/"}>
-                <Image
-                  width={121}
-                  height={28}
-                  src={"/images/logo.png"}
-                  alt="logo"
-                  className="sm:w-auto w-[103px] dark:hidden block"
-                />
-                <Image
-                  width={121}
-                  height={28}
-                  src={"/images/logo-light.png"}
-                  alt="logo"
-                  className="sm:w-auto w-[103px] dark:block hidden"
-                />
+              <Link href={"/"} className="text-[#232939] dark:text-white">
+                <PiLogo className={"max-sm:w-[104px] max-sm:h-6"} />
               </Link>
             </div>
             <Navigations navItems={navItems} />

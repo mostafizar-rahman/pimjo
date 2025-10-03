@@ -23,7 +23,7 @@ const Register = () => {
                 <div>
                   <label
                     htmlFor="email"
-                    className="mb-2 block text-sm font-medium tracking-[-0.2px] leading-[142.857%] text-gray-700"
+                    className="mb-2 block text-sm font-medium tracking-[-0.2px] leading-sm text-gray-700"
                   >
                     Email <span className="text-[#EF4444]">*</span>
                   </label>
@@ -37,7 +37,7 @@ const Register = () => {
                 <div className="mt-4">
                   <label
                     htmlFor="password"
-                    className="mb-2 block text-sm font-medium tracking-[-0.2px] leading-[142.857%] text-gray-700"
+                    className="mb-2 block text-sm font-medium tracking-[-0.2px] leading-sm text-gray-700"
                   >
                     Password <span className="text-[#EF4444]">*</span>
                   </label>
@@ -51,7 +51,7 @@ const Register = () => {
                 <div className="mt-4">
                   <label
                     htmlFor="re-password"
-                    className="mb-2 block text-sm font-medium tracking-[-0.2px] leading-[142.857%] text-gray-700"
+                    className="mb-2 block text-sm font-medium tracking-[-0.2px] leading-sm text-gray-700"
                   >
                     Re-type Password <span className="text-[#EF4444]">*</span>
                   </label>
@@ -71,19 +71,22 @@ const Register = () => {
                     />
                     <label
                       htmlFor="Remember"
-                      className="text-sm tracking-[-0.2px] leading-[142.857%] text-gray-700 cursor-pointer"
+                      className="text-sm tracking-[-0.2px] leading-sm text-gray-700 cursor-pointer"
                     >
                       Remember me
                     </label>
                   </div>
                   <Link
                     href={"#"}
-                    className="text-sm font-medium tracking-[-0.2px] leading-[142.857%] hover:text-secondary transition-all duration-500"
+                    className="text-sm font-medium tracking-[-0.2px] leading-sm hover:text-secondary transition-all duration-500"
                   >
                     Forgot password?
                   </Link>
                 </div>
-                <Button variant={"secondary"} className={"mt-5 w-full max-h-12 py-4"}>
+                <Button
+                  variant={"secondary"}
+                  className={"mt-5 w-full max-h-12 py-4"}
+                >
                   Create Account
                 </Button>
                 <p className="mt-6 text-gray-100 tracking-[-0.2px]">

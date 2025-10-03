@@ -2,6 +2,7 @@
 import Input from "@/component/ui/input";
 import {
   PiCloseDash,
+  PiLogo,
   PiMenuDash,
   PiMoon,
   PiSearch,
@@ -11,7 +12,6 @@ import {
 import { cn } from "@/lib/utils";
 import { ToggleContext } from "@/providers/dashboardToggleProvider";
 import { useTheme } from "@/providers/themeProvider";
-import Image from "next/image";
 import Link from "next/link";
 import { useContext, useState } from "react";
 import NotificationsDropdown from "./notificationsDropdown";
@@ -24,7 +24,7 @@ const Header = () => {
 
   return (
     <div className="sticky top-0 z-50">
-      <div className="lg:px-6 px-3 py-4 border-b border-b-border-dash bg-body-primary-dash">
+      <div className="lg:px-6 px-3 py-4 border-b border-b-border-dash bg-body-primary-dash max-h-[76px]">
         <div className="flex justify-between items-center relative">
           {/* left side search and sidebar  */}
           <div className="flex items-center gap-4 max-w-[490px] md:w-full">
@@ -47,7 +47,7 @@ const Header = () => {
               <Input
                 placeholder={"Search or type command..."}
                 className={
-                  "pl-12 w-full rounded-lg border-border-dash bg-body-primary-dash"
+                  "pl-12 w-full rounded-lg border-border-dash bg-body-primary-dash placeholder:text-text-secondary-dash"
                 }
               />
               <div className="w-[38px] h-[27px] text-xs text-text-secondary-dash tracking-[-0.2px] flex justify-center items-center text-center border border-border-dash rounded-lg absolute right-2.5 top-1/2 -translate-y-1/2">
@@ -57,21 +57,11 @@ const Header = () => {
           </div>
 
           {/* center logo, and three dot icon for small divices */}
-          <Link href={"/"} className="md:hidden block">
-            <Image
-              width={104}
-              height={24}
-              src={"/images/logo.png"}
-              alt="logo"
-              className="w-[103px] dark:hidden block"
-            />
-            <Image
-              width={104}
-              height={24}
-              src={"/images/logo-light.png"}
-              alt="logo"
-              className="w-[103px] dark:block hidden"
-            />
+          <Link
+            href={"/"}
+            className="md:hidden block text-[#232939] dark:text-white"
+          >
+            <PiLogo className={"max-md:w-[104px] max-md:h-6"} />
           </Link>
           <button
             onClick={() => setUserActionsShow(!userActionsShow)}

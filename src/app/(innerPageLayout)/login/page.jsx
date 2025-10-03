@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import SocalLogin from "@/component/clientSection/socalLogin";
 import Button from "@/component/ui/button";
@@ -10,42 +10,42 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 const Login = () => {
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
-  const [error, setError] = useState('')
-  const [isLoading, setIsLoading] = useState(false)
-  const { data: session } = useSession()
-  const router = useRouter()
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const { data: session } = useSession();
+  const router = useRouter();
 
   useEffect(() => {
     if (session) {
-      router.push('/dashboard')
+      router.push("/dashboard");
     }
-  }, [session, router])
+  }, [session, router]);
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
-    setIsLoading(true)
-    setError('')
+    e.preventDefault();
+    setIsLoading(true);
+    setError("");
 
     try {
-      const result = await signIn('credentials', {
+      const result = await signIn("credentials", {
         email,
         password,
-        redirect: false
-      })
+        redirect: false,
+      });
 
       if (result?.error) {
-        setError('Invalid email or password')
+        setError("Invalid email or password");
       } else {
-        router.push('/dashboard')
+        router.push("/dashboard");
       }
     } catch (error) {
-      setError('Something went wrong. Please try again.')
+      setError("Something went wrong. Please try again.");
     } finally {
-      setIsLoading(false)
+      setIsLoading(false);
     }
-  }
+  };
 
   return (
     <section className="lg:py-[112px] py-20 bg-primary">
@@ -69,7 +69,7 @@ const Login = () => {
                 <div>
                   <label
                     htmlFor="email"
-                    className="mb-2 block text-sm font-medium tracking-[-0.2px] leading-[142.857%] text-gray-700"
+                    className="mb-2 block text-sm font-medium tracking-[-0.2px] leading-sm text-gray-700"
                   >
                     Email <span className="text-[#EF4444]">*</span>
                   </label>
@@ -86,7 +86,7 @@ const Login = () => {
                 <div className="mt-4">
                   <label
                     htmlFor="password"
-                    className="mb-2 block text-sm font-medium tracking-[-0.2px] leading-[142.857%] text-gray-700"
+                    className="mb-2 block text-sm font-medium tracking-[-0.2px] leading-sm text-gray-700"
                   >
                     Password <span className="text-[#EF4444]">*</span>
                   </label>
@@ -109,14 +109,14 @@ const Login = () => {
                     />
                     <label
                       htmlFor="Remember"
-                      className="text-sm tracking-[-0.2px] leading-[142.857%] text-gray-700 cursor-pointer"
+                      className="text-sm tracking-[-0.2px] leading-sm text-gray-700 cursor-pointer"
                     >
                       Remember me
                     </label>
                   </div>
                   <Link
                     href={"#"}
-                    className="text-sm font-medium tracking-[-0.2px] leading-[142.857%] hover:text-secondary transition-all duration-500"
+                    className="text-sm font-medium tracking-[-0.2px] leading-sm hover:text-secondary transition-all duration-500"
                   >
                     Forgot password?
                   </Link>
@@ -127,7 +127,7 @@ const Login = () => {
                   type="submit"
                   disabled={isLoading}
                 >
-                  {isLoading ? 'Logging in...' : 'Login'}
+                  {isLoading ? "Logging in..." : "Login"}
                 </Button>
                 <p className="mt-6 text-gray-100 tracking-[-0.2px]">
                   Don't Have an account ?{" "}
@@ -140,8 +140,10 @@ const Login = () => {
                 </p>
                 <div className="mt-4 p-3 bg-blue-50 border border-blue-200 rounded">
                   <p className="text-sm text-blue-700">
-                    <strong>Demo credentials:</strong><br />
-                    Email: admin@example.com<br />
+                    <strong>Demo credentials:</strong>
+                    <br />
+                    Email: admin@example.com
+                    <br />
                     Password: admin123
                   </p>
                 </div>

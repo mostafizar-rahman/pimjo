@@ -8,7 +8,7 @@ const ProgressBar = ({ value, color }) => {
         />
       </div>
 
-      <span className="text-sm font-medium leading-[142.857%]">{value}%</span>
+      <span className="text-sm font-medium leading-sm">{value}%</span>
     </div>
   );
 };

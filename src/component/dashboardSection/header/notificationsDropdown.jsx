@@ -1,5 +1,5 @@
 "use client";
-import { PiClose, PiCloseDash, PiNotification } from "@/lib/icons";
+import { PiCloseDash, PiNotification } from "@/lib/icons";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 const notifications = [
@@ -128,7 +128,7 @@ const NotificationsDropdown = () => {
                       {/* Content */}
                       <div className="flex-1 min-w-0">
                         <p className="text-sm">
-                          <span className="font-semibold leading-[142.857%]">
+                          <span className="font-semibold leading-sm">
                             {notification.name}
                           </span>
                           <span className="text-text-secondary-dash ml-1">

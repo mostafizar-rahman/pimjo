@@ -33,7 +33,7 @@ const Products = async () => {
             <Input
               placeholder={"Search..."}
               className={
-                "pl-11 w-full text-text-gray-400-dash placeholder:text-text-gray-400-dash rounded-lg border-border-dash bg-card-background-dash"
+                "pl-11 w-full text-text-gray-400-dash placeholder:text-text-gray-400-dash rounded-lg border-border-dash bg-card-background-dash shadow-[0_1px_2px_0_rgba(16,24,40,0.05)]"
               }
             />
           </div>

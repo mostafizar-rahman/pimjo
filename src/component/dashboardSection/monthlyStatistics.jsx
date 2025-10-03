@@ -63,7 +63,7 @@ const AreaChartComponent = ({ data, maxDomain = 1000 }) => (
     <ResponsiveContainer width="100%" height="100%">
       <AreaChart
         data={data}
-        margin={{ left: -20, right: -10, top: 10, bottom: 0 }}
+        margin={{ left: -20, right: 0, top: 10, bottom: 0 }}
       >
         <defs>
           <linearGradient id="gradient1" x1="0" y1="0" x2="0" y2="1">
@@ -135,12 +135,10 @@ const MonthlyStatistics = () => {
       <div className="relative">
         <div>
           <Tabs defaultValue="overview">
-            <div className="flex items-center justify-between flex-wrap gap-5">
+            <div className="flex items-start justify-between flex-wrap gap-5">
               <div>
-                <h5 className="text-lg font-semibold leading-[1.55555555556]">
-                  Statistics
-                </h5>
-                <p className="mt-1 text-text-secondary-dash text-sm leading-[1.42857]">
+                <h5 className="text-lg font-semibold leading-xl">Statistics</h5>
+                <p className="mt-1 text-text-secondary-dash text-sm leading-sm">
                   Overall performance metrics for each month
                 </p>
               </div>

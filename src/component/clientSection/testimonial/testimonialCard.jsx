@@ -23,7 +23,7 @@ const TestimonialCard = ({ testimonials }) => {
           <p className="font-medium tracking-[-0.2px] text-gray-700">
             {testimonials.author}
           </p>
-          <small className="tracking-[-0.2px] leading-[142.857%] text-gray-100">
+          <small className="tracking-[-0.2px] leading-sm text-gray-100">
             {testimonials.posotion}
           </small>
         </div>

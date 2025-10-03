@@ -18,13 +18,13 @@ const AdsBanner = () => {
             />
           </div>
           <div className="rounded-2xl lg:p-10 p-5 bg-background flex justify-center items-center">
-            <div className="max-w-[357px] py-11">
-              <Title asChild size={"36"} className={"text-center"}>
+            <div className="py-11">
+              <Title asChild size={"36"} className={"text-center max-w-[357px]"}>
                 <h3>
                   Don’t Miss Out <br /> 50% OFF
                 </h3>
               </Title>
-              <p className="mt-3 text-center text-gray-100 text-sm tracking-[-0.2px] leading-[142.857%]">
+              <p className="mt-3 text-center text-gray-100 text-sm tracking-[-0.2px] leading-sm max-w-[320px] ">
                 Get 50% Off – Limited Time Only Refresh your wardrobe with
                 modern essentials.
               </p>

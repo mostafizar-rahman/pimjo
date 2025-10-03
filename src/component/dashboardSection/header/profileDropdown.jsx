@@ -56,7 +56,7 @@ const ProfileDropdown = () => {
           />
         </div>
         <div className="flex items-center gap-1">
-          <span className="text-text-color-dash text-sm font-medium leading-[142.857%]">
+          <span className="text-text-color-dash text-sm font-medium leading-sm">
             {session?.user?.name || "Emirhan Boruch"}
           </span>
           <span
@@ -64,7 +64,7 @@ const ProfileDropdown = () => {
               showUserPlan ? "rotate-180" : ""
             }`}
           >
-            <PiArrowDown className="text-text-secondary-dash" />
+            <PiArrowDown className="text-text-secondary-dash size-[18px]" />
           </span>
         </div>
       </div>
@@ -72,7 +72,7 @@ const ProfileDropdown = () => {
       {showUserPlan && (
         <div className="absolute top-[60px] right-0 w-[260px] bg-card-background-dash dark:bg-[#1A2231] rounded-2xl p-3 border border-border-dash shadow-[0_12px_16px_-4px_rgba(16,24,40,0.08),_0_4px_6px_-2px_rgba(16,24,40,0.03)] z-50">
           <div>
-            <p className="text-sm font-medium text-text-color-dash leading-[142.857%]">
+            <p className="text-sm font-medium text-text-color-dash leading-sm">
               {session?.user?.name || "Emirhan Boruch"}
             </p>
             <span className="text-xs text-text-secondary-dash">
@@ -84,7 +84,7 @@ const ProfileDropdown = () => {
               <span className="flex items-center justify-center w-6 h-6 text-text-secondary-dash group-hover:text-text-color-dash transition-all duration-500">
                 <PiUser />
               </span>
-              <p className="text-sm font-medium text-text-color-dash leading-[142.857%]">
+              <p className="text-sm font-medium text-text-color-dash leading-sm">
                 Edit profile
               </p>
             </li>
@@ -92,7 +92,7 @@ const ProfileDropdown = () => {
               <span className="flex items-center justify-center w-6 h-6 text-text-secondary-dash group-hover:text-text-color-dash transition-all duration-500">
                 <PiUser />
               </span>
-              <p className="text-sm font-medium text-text-color-dash leading-[142.857%]">
+              <p className="text-sm font-medium text-text-color-dash leading-sm">
                 Account settings
               </p>
             </li>
@@ -100,7 +100,7 @@ const ProfileDropdown = () => {
               <span className="flex items-center justify-center w-6 h-6 text-text-secondary-dash group-hover:text-text-color-dash transition-all duration-500">
                 <PiInfo />
               </span>
-              <p className="text-sm font-medium text-text-color-dash leading-[142.857%]">
+              <p className="text-sm font-medium text-text-color-dash leading-sm">
                 Support
               </p>
             </li>
@@ -112,7 +112,7 @@ const ProfileDropdown = () => {
               <span className="flex items-center justify-center w-6 h-6 text-text-secondary-dash group-hover:text-text-color-dash transition-all duration-500">
                 <PiExit />
               </span>
-              <p className="text-sm font-medium text-text-color-dash leading-[142.857%]">
+              <p className="text-sm font-medium text-text-color-dash leading-sm">
                 Sign out
               </p>
             </li>

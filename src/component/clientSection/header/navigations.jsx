@@ -16,11 +16,13 @@ const Navigations = ({ navItems }) => {
             {badge?.text && (
               <span
                 className={cn(
-                  "px-2 py-0.5 rounded-2xl text-xs font-medium tracking-[-0.2px] leading-[133.333%] flex justify-center items-center",
+                  "px-2 py-0.5 rounded-2xl text-xs font-medium tracking-[-0.2px] leading-xs flex justify-center items-center",
                   badge.variant === "danger"
                     ? "bg-[#EF444426] text-[#EF4444]"
                     : "",
-                  badge.variant === "info" ? "bg-[#EFF6FF] dark:bg-[#12b76a26] text-[#1D4ED8]" : ""
+                  badge.variant === "info"
+                    ? "bg-[#EFF6FF] dark:bg-[#12b76a26] text-[#1D4ED8]"
+                    : ""
                 )}
               >
                 {badge?.text}

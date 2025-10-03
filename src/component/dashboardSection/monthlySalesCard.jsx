@@ -29,9 +29,7 @@ const MonthlySalesCard = () => {
   return (
     <div className="bg-card-background-dash md:p-6 p-5 rounded-2xl outline outline-border-dash min-w-0">
       <div className="flex items-center justify-between">
-        <h5 className="text-lg font-semibold leading-[1.55555555556]">
-          Monthly Sales
-        </h5>
+        <h5 className="text-lg font-semibold leading-xl">Monthly Sales</h5>
         <span className="text-text-secondary-dash cursor-pointer w-6 h-6 flex justify-center items-center">
           <PiThreeDot />
         </span>
@@ -40,14 +38,14 @@ const MonthlySalesCard = () => {
         <ResponsiveContainer width={"100%"} height={"100%"}>
           <BarChart
             data={data}
-            margin={{ left: -29, right: -20, top: 5, bottom: 5 }}
+            margin={{ left: -20, right: 0, top: 14, bottom: -3 }}
           >
             <XAxis
               dataKey="name"
               axisLine={false}
               tickLine={false}
               tick={{ fontSize: 12, fill: `var(--text-color-dash)` }}
-              dy={8}
+              dy={5}
             />
             <YAxis
               axisLine={false}

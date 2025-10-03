@@ -36,14 +36,14 @@ const Dashboard = async () => {
   return (
     <div>
       <div>
-        <div className="grid lg:grid-cols-[628fr_448fr] lg:gap-[25px] gap-4">
+        <div className="grid lg:grid-cols-[628fr_449fr] lg:gap-6 gap-4">
           <div className="lg:space-y-6 space-y-4">
             <div className="grid sm:grid-cols-2 lg:gap-6 gap-4">
               <MetricCard
                 icon={<PiUsers />}
                 title={"Customers"}
                 value={stats.customers}
-                change="11.0%"
+                change="11.01%"
                 changeType="positive"
               />
               <MetricCard

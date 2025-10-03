@@ -1,6 +1,6 @@
-'use client'
-import { useCart } from "@/providers/cartProvider";
+"use client";
 import { PiHeart, PiShoppingCart } from "@/lib/icons";
+import { useCart } from "@/providers/cartProvider";
 import Image from "next/image";
 import Link from "next/link";
 import Button from "./button";
@@ -19,7 +19,7 @@ const Card = ({ product }) => {
           className="w-full h-auto"
         />
         {product.tag && (
-          <div className="absolute left-[18px] top-[18px] px-3 py-1 rounded-2xl text-sm font-medium tracking-[-0.2px] leading-[142.857%] bg-[#FEF2F2] text-[#B91C1C]">
+          <div className="absolute left-[18px] top-[18px] px-3 py-1 rounded-2xl text-sm font-medium tracking-[-0.2px] leading-sm bg-[#FEF2F2] text-[#B91C1C]">
             Hot Item
           </div>
         )}
@@ -40,7 +40,7 @@ const Card = ({ product }) => {
           </Link>
           <p className="font-medium tracking-[-0.2px]">${product.price}</p>
         </div>
-        <small className="leading-[142.857%] tracking-[-0.2px] text-gray-100">
+        <small className="leading-sm tracking-[-0.2px] text-gray-100">
           {product.description}
         </small>
         <Button

@@ -17,7 +17,7 @@ const TopHeder = () => {
   return (
     <div className="bg-gray-900 sm:py-3.5 py-3">
       <div className="container">
-        <div className="flex sm:flex-row flex-col-reverse justify-between items-center gap-y-2">
+        <div className="xl:px-8 flex sm:flex-row flex-col-reverse justify-between items-center gap-y-2">
           <div className="flex items-center gap-5">
             <div>
               <Select>
@@ -33,15 +33,15 @@ const TopHeder = () => {
             </div>
             <div>
               <Select value="USD">
-                <SelectTrigger className={"w-[67px]"}>
+                <SelectTrigger className={"w-[67px] gap-1"}>
                   <SelectValue />
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="USD">
-                    <span className="flex items-center gap-2">
+                    <span className="flex items-center gap-1">
                       <Image
-                        width={14}
-                        height={14}
+                        width={16}
+                        height={16}
                         src={"/images/us-flag.png"}
                         alt="img"
                         className={"shrink-0"}
@@ -50,10 +50,10 @@ const TopHeder = () => {
                     </span>
                   </SelectItem>
                   <SelectItem value="euro">
-                    <span className="flex items-center gap-2">
+                    <span className="flex items-center gap-1">
                       <Image
-                        width={14}
-                        height={14}
+                        width={16}
+                        height={16}
                         src={"/images/france.png"}
                         alt="img"
                         className={"shrink-0"}
@@ -65,11 +65,11 @@ const TopHeder = () => {
               </Select>
             </div>
           </div>
-          <p className="text-primary dark:text-foreground leading-[143%] tracking-[-0.2px] text-sm">
+          <p className="text-primary dark:text-foreground leading-sm tracking-[-0.2px] text-sm">
             Flash Sale Live – <strong className="font-medium">30% Off</strong>{" "}
             Everything
           </p>
-          <div className="hidden md:flex items-center gap-1 text-primary dark:text-foreground leading-[143%] tracking-[-0.2px] text-sm">
+          <div className="hidden md:flex items-center gap-1 text-primary dark:text-foreground leading-sm tracking-[-0.2px] text-sm">
             {session ? (
               <Link
                 href={"/dashboard"}

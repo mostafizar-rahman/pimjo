@@ -7,10 +7,10 @@ const HeroProducts = () => {
       <div className="rounded-xl lg:p-6 p-5 bg-background">
         <div className="flex justify-between items-center">
           <div className="max-w-[163px]">
-            <small className="uppercase font-medium leading-[142.857%] text-gray-100">
+            <small className="uppercase font-medium leading-sm text-gray-100">
               xiaomi
             </small>
-            <p className="text-xl font-semibold mt-2 text-gray-700 tracking-[-0.2px] leading-[140%]">
+            <p className="text-xl font-semibold mt-2 text-gray-700 tracking-[-0.2px] leading-xl">
               Smart Security Home Camera
             </p>
             <Button
@@ -21,14 +21,14 @@ const HeroProducts = () => {
               Shop Now
             </Button>
           </div>
-          <div className="max-h-[222px] pt-5 flex justify-end shrink-0">
+          <div className="max-h-[222px] pt-4 px-[17px] flex justify-end shrink-0">
             <Image
-              width={162}
+              width={126}
               height={198}
               sizes="100vh"
               src={"/images/hero/product-img-1.png"}
               alt="img"
-              className="h-auto aspect-[162/198] object-contain"
+              className="h-auto aspect-[126/198] object-contain"
             />
           </div>
         </div>
@@ -37,11 +37,11 @@ const HeroProducts = () => {
         <div className="flex justify-between">
           <div className="max-w-[163px] flex flex-col justify-between">
             <div>
-              <small className="uppercase font-medium leading-[142.857%] text-gray-100">
+              <small className="uppercase font-medium leading-sm text-gray-100">
                 redmi
               </small>
-              <p className="text-xl font-semibold mt-2 text-gray-700 tracking-[-0.2px] leading-[140%]">
-                Smart Watch 5 lite
+              <p className="text-xl font-semibold mt-2 text-gray-700 tracking-[-0.2px] leading-xl">
+                Smart Watch <span className="lg:block inline-block">5 lite</span>
               </p>
             </div>
             <Button
@@ -52,7 +52,7 @@ const HeroProducts = () => {
               Shop Now
             </Button>
           </div>
-          <div className="max-h-[214px] pt-3.5 flex justify-end shrink-0">
+          <div className="max-h-[214px] pt-3.5 pb-1 flex justify-end shrink-0">
             <Image
               width={162}
               height={196}

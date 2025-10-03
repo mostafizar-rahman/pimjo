@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 const SemicircleProgress = ({
   percentage = 75.55,
   size = 328,
-  height,
+  height = 164,
   strokeWidth = 12,
   primaryColor = "#4F46E5",
   backgroundColor = "#E5E7EB",
@@ -12,10 +12,14 @@ const SemicircleProgress = ({
 }) => {
   const [animatedPercentage, setAnimatedPercentage] = useState(0);
   const [currentSize, setCurrentSize] = useState(size);
+  const [currentHeight, setCurrentHeight] = useState(height);
 
   useEffect(() => {
     const handleResize = () => {
-      setCurrentSize(window.innerWidth < 1024 ? 248 : size);
+      const newSize = window.innerWidth < 1024 ? 248 : size;
+      const newHeight = window.innerWidth < 1024 ? 124 : height;
+      setCurrentSize(newSize);
+      setCurrentHeight(newHeight);
     };
 
     // Set initial size
@@ -23,7 +27,7 @@ const SemicircleProgress = ({
 
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
-  }, [size]);
+  }, [size, height]);
 
   const radius = (currentSize - strokeWidth) / 2;
   const circumference = Math.PI * radius; // Half circle circumference
@@ -54,14 +58,20 @@ const SemicircleProgress = ({
   return (
     <div
       className="relative"
-      style={{ width: currentSize, height: height ? height : currentSize / 2 + 40 }}
+      style={{ width: currentSize, height: currentHeight }}
     >
-      <svg width={currentSize} height={currentSize / 2 + 40} className="overflow-visible">
+      <svg
+        width={currentSize}
+        height={currentHeight}
+        className="overflow-visible"
+      >
         {/* Background semicircle */}
         <path
-          d={`M ${strokeWidth / 2} ${currentSize / 2} A ${radius} ${radius} 0 0 1 ${
-            currentSize - strokeWidth / 2
-          } ${currentSize / 2}`}
+          d={`M ${strokeWidth / 2} ${
+            currentSize / 2
+          } A ${radius} ${radius} 0 0 1 ${currentSize - strokeWidth / 2} ${
+            currentSize / 2
+          }`}
           stroke={backgroundColor}
           strokeWidth={strokeWidth}
           fill="transparent"
@@ -70,9 +80,11 @@ const SemicircleProgress = ({
 
         {/* Progress semicircle */}
         <path
-          d={`M ${strokeWidth / 2} ${currentSize / 2} A ${radius} ${radius} 0 0 1 ${
-            currentSize - strokeWidth / 2
-          } ${currentSize / 2}`}
+          d={`M ${strokeWidth / 2} ${
+            currentSize / 2
+          } A ${radius} ${radius} 0 0 1 ${currentSize - strokeWidth / 2} ${
+            currentSize / 2
+          }`}
           stroke={primaryColor}
           strokeWidth={strokeWidth}
           fill="transparent"
@@ -88,7 +100,7 @@ const SemicircleProgress = ({
         <div className="lg:text-4xl text-3xl lg:leading-[122.222%] font-semibold ">
           {animatedPercentage.toFixed(2)}%
         </div>
-        <div className="mt-2 px-3 py-1 bg-success-light-background text-[#039855] leading-[142.857%] text-sm font-medium rounded-full">
+        <div className="mt-2 px-3 py-1 bg-green-100 text-green-700 leading-sm text-sm font-medium rounded-full">
           +10%
         </div>
       </div>

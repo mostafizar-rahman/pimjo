@@ -3,7 +3,7 @@ import Sidebar from "@/component/dashboardSection/sidebar";
 
 const Layout = ({ children }) => {
   return (
-    <div className="grid xl:grid-cols-[291px_auto] bg-body-secondary-dash text-text-title-dash">
+    <div className="grid xl:grid-cols-[291px_auto] bg-body-secondary-dash text-text-title-dash max-w-[1440px] mx-auto">
       <Sidebar />
       <div className="min-w-0">
         <Header />

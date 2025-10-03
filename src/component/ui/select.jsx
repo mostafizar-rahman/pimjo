@@ -81,7 +81,7 @@ export const SelectTrigger = ({ children, className }) => {
       disabled={disabled}
       className={cn(
         `
-        flex w-full items-center justify-between gap-1.5 text-primary dark:text-foreground text-sm tracking-[-0.2px] leading-[142.857%] disabled:cursor-not-allowed disabled:opacity-50
+        flex w-full items-center justify-between gap-1.5 text-primary dark:text-foreground text-sm tracking-[-0.2px] leading-sm disabled:cursor-not-allowed disabled:opacity-50
         hover:text-gray-200 shadow-[0_1px_2px_0_rgba(16,24,40,0.05)] rounded-lg
         transition-all
       `,

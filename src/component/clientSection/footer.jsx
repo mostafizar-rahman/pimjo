@@ -1,12 +1,19 @@
 import {
+  PiAmericanExpressCard,
+  PiAppleStore,
   PiFacebook,
+  PiGooglePlayStore,
   PiHeadPhone,
   PiInstagram,
   PiLinkedin,
+  PiLogo,
+  PiMasterCard,
+  PiPayPalCard,
   PiTwitter,
+  PiVisaCard,
+  PiWesternUnionCard,
 } from "@/lib/icons";
 import { cn } from "@/lib/utils";
-import Image from "next/image";
 import Link from "next/link";
 import Button from "../ui/button";
 import Input from "../ui/input";
@@ -79,22 +86,13 @@ const Footer = () => {
           <div className="xl:px-8">
             <div className="flex lg:flex-row flex-col justify-between gap-x-10 gap-y-11">
               {/* logo and socil icons */}
-              <div className="max-w-[378px] shrink flex flex-col justify-between">
+              <div className="max-w-[378px] flex flex-col justify-between">
                 <div>
-                  <Link href={"#"}>
-                    <Image
-                      width={120}
-                      height={28}
-                      src={"/images/logo.png"}
-                      alt="logo"
-                      className="dark:hidden block"
-                    />
-                    <Image
-                      width={120}
-                      height={28}
-                      src={"/images/logo-light.png"}
-                      alt="logo"
-                      className="dark:block hidden"
+                  <Link href={"/"} className="text-[#232939] dark:text-white">
+                    <PiLogo
+                      className={
+                        "max-sm:w-[104px] max-sm:h-6 w-[130px] h-[30px]"
+                      }
                     />
                   </Link>
                   <p className="mt-6 tracking-[-0.2px] text-gray-100">
@@ -143,10 +141,10 @@ const Footer = () => {
                 </div>
               </div>
 
-              <div className="max-w-[744px] shrink-0 flex md:flex-row flex-col justify-between xl:gap-x-20 gap-x-10 gap-y-11">
+              <div className="max-w-[744px] grow flex md:flex-row flex-col justify-between xl:gap-x-20 gap-x-10 gap-y-11">
                 {/* Clothing links */}
                 <div className="shrink-0">
-                  <h5 className="font-semibold text-xl tracking-[-0.2px] leading-[140%]">
+                  <h5 className="font-semibold text-xl tracking-[-0.2px] leading-xl">
                     Clothing
                   </h5>
                   <ul className="space-y-3 mt-6">
@@ -164,7 +162,7 @@ const Footer = () => {
                 </div>
                 {/* Shoes links */}
                 <div className="shrink-0">
-                  <h5 className="font-semibold text-xl tracking-[-0.2px] leading-[140%]">
+                  <h5 className="font-semibold text-xl tracking-[-0.2px] leading-xl">
                     Shoes
                   </h5>
                   <ul className="space-y-3 mt-6">
@@ -179,9 +177,9 @@ const Footer = () => {
                         {badge?.text && (
                           <span
                             className={cn(
-                              "px-2 py-1 rounded-2xl text-xs font-medium tracking-[-0.2px] leading-[133.333%]",
+                              "px-2 py-0.5 rounded-2xl text-xs font-medium tracking-[-0.2px] leading-xs",
                               badge.variant === "danger"
-                                ? "bg-[#EF444426] text-[#EF4444]"
+                                ? "bg-[#FEF2F2] text-[#B91C1C]"
                                 : ""
                             )}
                           >
@@ -194,7 +192,7 @@ const Footer = () => {
                 </div>
                 {/* Newsletter */}
                 <div className="sm:max-w-[364px] shrink w-full">
-                  <h5 className="font-semibold text-xl tracking-[-0.2px] leading-[140%]">
+                  <h5 className="font-semibold text-xl tracking-[-0.2px] leading-xl">
                     Newsletter
                   </h5>
                   <p className="text-gray-100 tracking-[-0.2px] mt-2">
@@ -213,62 +211,53 @@ const Footer = () => {
         </div>
       </div>
       {/* footer bottom */}
-      <div className="bg-primary lg:py-6 py-8 border-b border-b-background">
+      <div className="bg-primary border-b border-b-background max-md:py-8">
         <div className="container">
           <div className="xl:px-8">
-            <div className="flex md:flex-row flex-col justify-between items-center gap-x-10 gap-y-6">
-              <div className="flex lg:flex-row flex-col items-center gap-3 relative lg:after:block after:hidden after:absolute after:h-[100px] after:w-px after:-right-16 after:-top-8 after:bg-background">
+            <div className="flex md:flex-row flex-col justify-between items-center xl:gap-x-10 gap-x-6 gap-y-6">
+              <div className="md:py-6 flex xl:flex-row flex-col max-md:items-center xl:items-center gap-3 order-1">
                 <div className="w-10 h-10 flex justify-center items-center rounded-lg bg-background text-gray-700">
                   <PiHeadPhone />
                 </div>
                 <div>
-                  <p className="text-gray-100 leading-[133.333%] text-xs tracking-[-0.2px] block">
+                  <p className="text-gray-100 leading-xs text-xs tracking-[-0.2px] block mb-0.5">
                     8:30 AM - 10:30 PM
                   </p>
                   <a
                     href="tel:+16283998030"
-                    className="text-sm font-semibold leading-[142.857%] block"
+                    className="text-sm font-semibold leading-sm block"
                   >
                     +16283998030
                   </a>
                 </div>
               </div>
-              <span className="md:hidden w-full h-px bg-background"></span>
-              <div className="flex xl:flex-row flex-col items-center text-center xl:text-start gap-3 relative lg:after:block after:hidden after:absolute after:h-[100px] after:w-px after:-right-16 after:-top-8 after:bg-background">
+              <span className="block md:w-px md:min-h-[140px] xl:min-h-[100px] w-full h-px bg-background order-2"></span>
+              <div className="md:py-6 flex xl:flex-row flex-col max-md:items-center xl:items-center max-md:text-center justify-between gap-3 md:order-3 order-5 max-w-[531px] xl:w-full">
                 <div>
                   <p className="font-semibold tracking-[-0.2px]">
                     Download Now on
                   </p>
-                  <p className="text-xs tracking-[-0.2px] text-gray-100">
+                  <p className="text-xs leading-xs tracking-[-0.2px] text-gray-100 mt-1">
                     Free home delivery on your first purchase
                   </p>
                 </div>
                 <div className="flex gap-2.5">
-                  <Image
-                    width={133}
-                    height={40}
-                    src={"/images/footer/app-store.png"}
-                    alt="img"
-                  />
-                  <Image
-                    width={133}
-                    height={40}
-                    src={"/images/footer/google-play.png"}
-                    alt="img"
-                  />
+                  <PiAppleStore className={"max-lg:w-[120px]"} />
+                  <PiGooglePlayStore className={"max-lg:w-[120px]"} />
                 </div>
               </div>
-              <span className="md:hidden w-full h-px bg-background"></span>
-              <div className="text-center md:text-start">
-                <p className="text-sm mb-3 font-medium text-gray-100 leading-[143%]">
+              <span className="block md:w-px md:min-h-[140px] xl:min-h-[100px] w-full h-px bg-background order-4"></span>
+              <div className="md:py-6 text-center md:text-start md:order-5 order-3">
+                <p className="text-sm mb-3 font-medium text-gray-100 leading-sm">
                   We Support
                 </p>
-                <Image
-                  width={270}
-                  height={20}
-                  src={"/images/footer/pay.png"}
-                  alt="img"
-                />
+                <div className="flex gap-4 items-center">
+                  <PiMasterCard />
+                  <PiVisaCard />
+                  <PiPayPalCard />
+                  <PiAmericanExpressCard />
+                  <PiWesternUnionCard />
+                </div>
               </div>
             </div>
           </div>
