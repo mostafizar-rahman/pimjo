@@ -225,7 +225,7 @@ const Footer = () => {
                   </p>
                   <a
                     href="tel:+16283998030"
-                    className="text-sm font-semibold leading-sm block"
+                    className="text-sm font-semibold leading-sm block tracking-[-0.2px]"
                   >
                     +16283998030
                   </a>
@@ -248,7 +248,7 @@ const Footer = () => {
               </div>
               <span className="block md:w-px md:min-h-[140px] xl:min-h-[100px] w-full h-px bg-background order-4"></span>
               <div className="md:py-6 text-center md:text-start md:order-5 order-3">
-                <p className="text-sm mb-3 font-medium text-gray-100 leading-sm">
+                <p className="text-sm mb-3 font-medium text-gray-100 leading-sm tracking-[-0.2px]">
                   We Support
                 </p>
                 <div className="flex gap-4 items-center">

@@ -86,7 +86,7 @@ const NotificationsDropdown = () => {
       </button>
       {showDropdown && (
         <div
-          className={`absolute md:right-0 max-md:left-0 max-sm:-left-[135%] z-30 top-[60px] w-[361px] bg-card-background-dash dark:bg-[#1A2231] rounded-2xl p-3 border border-border-dash shadow-[0_12px_16px_-4px_rgba(16,24,40,0.08),_0_4px_6px_-2px_rgba(16,24,40,0.03)]`}
+          className={`absolute md:right-0 max-md:left-0 max-sm:-left-[135%] z-30 top-[58px] w-[361px] bg-card-background-dash dark:bg-[#1A2231] rounded-2xl p-3 border border-border-dash shadow-[0_12px_16px_-4px_rgba(16,24,40,0.08),_0_4px_6px_-2px_rgba(16,24,40,0.03)]`}
         >
           <div className="flex justify-between border-b border-b-border-secondary-dash pb-3">
             <h6 className="font-semibold leading-[155.556%]">Notifications</h6>

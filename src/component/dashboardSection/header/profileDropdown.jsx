@@ -70,7 +70,7 @@ const ProfileDropdown = () => {
       </div>
 
       {showUserPlan && (
-        <div className="absolute top-[60px] right-0 w-[260px] bg-card-background-dash dark:bg-[#1A2231] rounded-2xl p-3 border border-border-dash shadow-[0_12px_16px_-4px_rgba(16,24,40,0.08),_0_4px_6px_-2px_rgba(16,24,40,0.03)] z-50">
+        <div className="absolute top-[58px] right-0 w-[260px] bg-card-background-dash dark:bg-[#1A2231] rounded-2xl p-3 border border-border-dash shadow-[0_12px_16px_-4px_rgba(16,24,40,0.08),_0_4px_6px_-2px_rgba(16,24,40,0.03)] z-50">
           <div>
             <p className="text-sm font-medium text-text-color-dash leading-sm">
               {session?.user?.name || "Emirhan Boruch"}

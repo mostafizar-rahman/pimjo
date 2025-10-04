@@ -2,18 +2,18 @@ import { CartProvider } from "@/providers/cartProvider";
 import DashboardToggleProvider from "@/providers/dashboardToggleProvider";
 import NextAuthSessionProvider from "@/providers/sessionProvider";
 import { ThemeProvider } from "@/providers/themeProvider";
-import { DM_Sans, Outfit } from "next/font/google";
+import { Outfit } from "next/font/google";
+import localFont from 'next/font/local';
 import { cookies } from "next/headers";
 import "./globals.css";
 
-const dmSans = DM_Sans({
-  variable: "--font-dm-sans",
-  subsets: ["latin"],
+const dmSans = localFont({
+  src: [
+    { path: './fonts/DM_Sans/DMSans-VariableFont_opsz,wght.ttf', weight: '100 1000', style: 'normal' },
+  ],
+  variable: '--font-dm-sans',
   display: "swap",
-  preload: true,
   fallback: ["sans-serif"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-  style: "normal"
 });
 
 const outfit = Outfit({
