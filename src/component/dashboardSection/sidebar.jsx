@@ -27,6 +27,7 @@ const Sidebar = () => {
   return (
     <>
       <div
+        onClick={() => setIsSidebarShow(false)}
         className={cn(
           "bg-[#101828] fixed w-full h-screen z-40 transition-all duration-300",
           isSidebarShow ? "opacity-50 visible" : "opacity-0 invisible"
