@@ -1,7 +1,11 @@
+import { getProducts } from "@/lib/data";
 import Image from "next/image";
+import ErrorDIsplay from "./errorDIsplay";
 import { StatusBadge } from "./recentOrders";
 
-const ProductsTable = ({ products }) => {
+const ProductsTable = async () => {
+  const { data: products, error, success } = await getProducts();
+  if (!success) return <ErrorDIsplay error={error} />;
   return (
     <div className="overflow-x-auto">
       <table className="min-w-[600px] w-full">

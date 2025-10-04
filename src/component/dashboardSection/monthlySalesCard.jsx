@@ -34,51 +34,55 @@ const MonthlySalesCard = () => {
           <PiThreeDot />
         </span>
       </div>
-      <div className="mt-6 w-full h-[188px]">
-        <ResponsiveContainer width={"100%"} height={"100%"}>
-          <BarChart
-            data={data}
-            margin={{ left: -20, right: 0, top: 14, bottom: -3 }}
-          >
-            <XAxis
-              dataKey="name"
-              axisLine={false}
-              tickLine={false}
-              tick={{ fontSize: 12, fill: `var(--text-color-dash)` }}
-              dy={5}
-            />
-            <YAxis
-              axisLine={false}
-              tickLine={false}
-              tick={{ fontSize: 12, fill: `var(--text-color-dash)` }}
-              domain={[0, 800]}
-            />
-            <Tooltip
-              contentStyle={{
-                backgroundColor: "#E5E7EB",
-                border: "none",
-                borderRadius: "8px",
-                fontSize: "12px",
-              }}
-              labelStyle={{ color: "#101828" }}
-              itemStyle={{ color: "#101828" }}
-              cursor={false}
-            />
-            <CartesianGrid
-              strokeDasharray="0.5 0"
-              stroke={`var(--border-secondary-dash)`}
-              horizontal={true}
-              vertical={false}
-            />
-            <Bar
-              dataKey="sales"
-              radius={[8, 8, 0, 0]}
-              barSize={20}
-              fill={`var(--border-secondary-dash)`}
-              activeBar={{ fill: "#3B82F6" }}
-            ></Bar>
-          </BarChart>
-        </ResponsiveContainer>
+      <div className="max-sm:overflow-x-auto mt-6">
+        <div className="max-sm:min-w-[640px]">
+          <div className="w-full h-[188px]">
+            <ResponsiveContainer width={"100%"} height={"100%"}>
+              <BarChart
+                data={data}
+                margin={{ left: -20, right: 0, top: 14, bottom: -3 }}
+              >
+                <XAxis
+                  dataKey="name"
+                  axisLine={false}
+                  tickLine={false}
+                  tick={{ fontSize: 12, fill: `var(--text-color-dash)` }}
+                  dy={5}
+                />
+                <YAxis
+                  axisLine={false}
+                  tickLine={false}
+                  tick={{ fontSize: 12, fill: `var(--text-color-dash)` }}
+                  domain={[0, 800]}
+                />
+                <Tooltip
+                  contentStyle={{
+                    backgroundColor: "#E5E7EB",
+                    border: "none",
+                    borderRadius: "8px",
+                    fontSize: "12px",
+                  }}
+                  labelStyle={{ color: "#101828" }}
+                  itemStyle={{ color: "#101828" }}
+                  cursor={false}
+                />
+                <CartesianGrid
+                  strokeDasharray="0.5 0"
+                  stroke={`var(--border-secondary-dash)`}
+                  horizontal={true}
+                  vertical={false}
+                />
+                <Bar
+                  dataKey="sales"
+                  radius={[8, 8, 0, 0]}
+                  barSize={20}
+                  fill={`var(--border-secondary-dash)`}
+                  activeBar={{ fill: "#3758F9" }}
+                ></Bar>
+              </BarChart>
+            </ResponsiveContainer>
+          </div>
+        </div>
       </div>
     </div>
   );

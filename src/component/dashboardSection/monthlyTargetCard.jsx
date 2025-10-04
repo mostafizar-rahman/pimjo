@@ -1,6 +1,10 @@
 import { PiArrowUp, PiThreeDot } from "@/lib/icons";
+import dynamic from "next/dynamic";
 import SemicircleProgress from "../ui/semicircleProgress";
 
+// const SemicircleProgress = dynamic(() => import("../ui/semicircleProgress"), {
+//   ssr: false,
+// });
 const MonthlyTargetCard = () => {
   return (
     <div className="bg-tab-background-dash outline outline-border-dash rounded-2xl">
@@ -17,15 +21,8 @@ const MonthlyTargetCard = () => {
           </p>
         </div>
         <div className="flex flex-col items-center justify-center md:mt-11 mt-8">
-          <SemicircleProgress
-            percentage={75.55}
-            size={328}
-            height={164}
-            strokeWidth={13}
-            primaryColor="#3758F9"
-            backgroundColor="#E4E7EC"
-          />
-          <p className="text-text-secondary-dash mt-6 text-center max-w-[400px] mx-auto pb-3">
+          <SemicircleProgress />
+          <p className="text-text-secondary-dash mt-6 text-center max-w-[400px] mx-auto pb-2.5">
             You earn $3287 today, its higher than last month. Keep up your good
             work!
           </p>

@@ -59,73 +59,77 @@ const revenueData = [
 ];
 
 const AreaChartComponent = ({ data, maxDomain = 1000 }) => (
-  <div className="w-full h-[276px] mt-6">
-    <ResponsiveContainer width="100%" height="100%">
-      <AreaChart
-        data={data}
-        margin={{ left: -20, right: 0, top: 10, bottom: 0 }}
-      >
-        <defs>
-          <linearGradient id="gradient1" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="40%" stopColor="#3758F9" stopOpacity={0.5} />
-            <stop offset="100%" stopColor="#3758F9" stopOpacity={0} />
-          </linearGradient>
-          <linearGradient id="gradient2" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stopColor="#9CB9FF" stopOpacity={0.3} />
-            <stop offset="100%" stopColor="#9CB9FF" stopOpacity={0} />
-          </linearGradient>
-        </defs>
+  <div className="max-sm:overflow-x-auto mt-6">
+    <div className="max-sm:min-w-[640px]">
+      <div className="w-full h-[276px]">
+        <ResponsiveContainer width="100%" height="100%">
+          <AreaChart
+            data={data}
+            margin={{ left: -20, right: 0, top: 10, bottom: 0 }}
+          >
+            <defs>
+              <linearGradient id="gradient1" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="40%" stopColor="#3758F9" stopOpacity={0.5} />
+                <stop offset="100%" stopColor="#3758F9" stopOpacity={0} />
+              </linearGradient>
+              <linearGradient id="gradient2" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stopColor="#9CB9FF" stopOpacity={0.3} />
+                <stop offset="100%" stopColor="#9CB9FF" stopOpacity={0} />
+              </linearGradient>
+            </defs>
 
-        <XAxis
-          dataKey="name"
-          axisLine={false}
-          tickLine={false}
-          tick={{ fontSize: 12, fill: `var(--text-color-dash)` }}
-          dy={8}
-        />
-        <YAxis
-          axisLine={false}
-          tickLine={false}
-          tick={{ fontSize: 12, fill: `var(--text-color-dash)` }}
-          domain={[0, maxDomain]}
-          tickCount={6}
-        />
-        <Tooltip
-          contentStyle={{
-            backgroundColor: "#1F2937",
-            border: "none",
-            borderRadius: "8px",
-            color: "#FFFFFF",
-            fontSize: "12px",
-          }}
-          labelStyle={{ color: "#FFFFFF" }}
-          cursor={false}
-        />
-        <CartesianGrid
-          strokeDasharray="0.5 0"
-          horizontal={true}
-          vertical={false}
-          stroke={`var(--border-secondary-dash)`}
-        />
+            <XAxis
+              dataKey="name"
+              axisLine={false}
+              tickLine={false}
+              tick={{ fontSize: 12, fill: `var(--text-color-dash)` }}
+              dy={8}
+            />
+            <YAxis
+              axisLine={false}
+              tickLine={false}
+              tick={{ fontSize: 12, fill: `var(--text-color-dash)` }}
+              domain={[0, maxDomain]}
+              tickCount={6}
+            />
+            <Tooltip
+              contentStyle={{
+                backgroundColor: "#1F2937",
+                border: "none",
+                borderRadius: "8px",
+                color: "#FFFFFF",
+                fontSize: "12px",
+              }}
+              labelStyle={{ color: "#FFFFFF" }}
+              cursor={false}
+            />
+            <CartesianGrid
+              strokeDasharray="0.5 0"
+              horizontal={true}
+              vertical={false}
+              stroke={`var(--border-secondary-dash)`}
+            />
 
-        <Area
-          type="monotone"
-          dataKey="line1"
-          stroke="#3758F9"
-          strokeWidth={2}
-          fill="url(#gradient1)"
-          fillOpacity={0.1}
-        />
-        <Area
-          type="monotone"
-          dataKey="line2"
-          stroke="#9CB9FF"
-          strokeWidth={2}
-          fill="url(#gradient2)"
-          fillOpacity={0.1}
-        />
-      </AreaChart>
-    </ResponsiveContainer>
+            <Area
+              type="monotone"
+              dataKey="line1"
+              stroke="#3758F9"
+              strokeWidth={2}
+              fill="url(#gradient1)"
+              fillOpacity={0.1}
+            />
+            <Area
+              type="monotone"
+              dataKey="line2"
+              stroke="#9CB9FF"
+              strokeWidth={2}
+              fill="url(#gradient2)"
+              fillOpacity={0.1}
+            />
+          </AreaChart>
+        </ResponsiveContainer>
+      </div>
+    </div>
   </div>
 );
 

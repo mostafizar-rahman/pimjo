@@ -31,12 +31,13 @@ export const metadata = {
   description: "PiMJO | E-commerce build using Next.js, Tailwind CSS, ReChart",
 };
 
-export default function RootLayout({ children }) {
-  const theme = cookies().get("theme");
+export default async function RootLayout({ children }) {
+  const cookieStore = await cookies();
+  const theme = cookieStore.get("theme");
   return (
     <html lang="en">
       <body
-        className={`${dmSans.variable} ${outfit.variable} antialiased optim ${theme?.value === "dark" ? "dark" : ""
+        className={`${dmSans.variable} ${outfit.variable} antialiased ${theme?.value === "dark" ? "dark" : ""
           }`}
       >
         <ThemeProvider>

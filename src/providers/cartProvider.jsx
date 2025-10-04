@@ -9,7 +9,7 @@ export const useCart = () => useContext(CartContext);
 
 export const CartProvider = ({ children }) => {
     const [cartItems, setCartItems] = useState([]);
-console.log(cartItems)
+
     // Load cart from localStorage on initial render
     useEffect(() => {
         try {
@@ -36,7 +36,6 @@ console.log(cartItems)
 
     const addToCart = (product) => {
         toast.success('Product Added')
-        console.log(product)
         setCartItems(prevItems => {
             const existingItem = prevItems.find(item => item.id === product.id);
             if (existingItem) {

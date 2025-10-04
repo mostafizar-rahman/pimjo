@@ -1,14 +1,24 @@
-import { PiArrowUp } from "@/lib/icons";
+import { getStats } from "@/lib/data";
+import { PiArrowUp, PiCube, PiUsers } from "@/lib/icons";
 import { cn } from "@/lib/utils";
+import ErrorDIsplay from "./errorDIsplay";
 
-export const MetricCard = ({ title, value, change, changeType, icon }) => {
+const iconFind = (icon) => {
+  const icons = {
+    customers: <PiUsers />,
+    orders: <PiCube />,
+  };
+  return icons[icon];
+};
+
+const MetricCard = ({ title, value, change, changeType }) => {
   return (
     <div className="bg-card-background-dash md:p-6 p-5 rounded-2xl outline outline-border-dash">
       <div className="flex items-center justify-center w-12 h-12 bg-tab-background-dash rounded-xl">
-        {icon && <div>{icon}</div>}
+        {title && <div>{iconFind(title)}</div>}
       </div>
       <div className="mt-5">
-        <p className="text-sm text-text-secondary-dash leading-sm">
+        <p className="text-sm text-text-secondary-dash leading-sm capitalize">
           {title}
         </p>
         <div className="flex justify-between items-end mt-2">
@@ -32,6 +42,24 @@ export const MetricCard = ({ title, value, change, changeType, icon }) => {
           </p>
         </div>
       </div>
+    </div>
+  );
+};
+
+export const MetricCardContainer = async () => {
+  const { data: stats, error, success } = await getStats();
+  if (!success) return <ErrorDIsplay error={error} className="max-h-[182px]" />;
+  return (
+    <div className="grid sm:grid-cols-2 lg:gap-6 gap-4">
+      {stats.map((st) => (
+        <MetricCard
+          key={st.title}
+          title={st.title}
+          value={st.value}
+          change={st.change}
+          changeType={st.changeType}
+        />
+      ))}
     </div>
   );
 };

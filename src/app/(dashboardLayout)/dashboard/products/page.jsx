@@ -2,23 +2,10 @@ import ProductsTable from "@/component/dashboardSection/productsTable";
 import DateRange from "@/component/ui/dateRange";
 import Input from "@/component/ui/input";
 import Pagination from "@/component/ui/pagination";
-import { getBaseUrl } from "@/lib/getBaseUrl";
 import { PiSearch } from "@/lib/icons";
-
-async function getProducts() {
-  const baseUrl = await getBaseUrl();
-  const res = await fetch(`${baseUrl}/api/products`, {
-    cache: "no-store",
-  });
-  if (!res.ok) {
-    throw new Error("Failed to fetch products");
-  }
-  return res.json();
-}
+import { Suspense } from "react";
 
 const Products = async () => {
-  const products = await getProducts();
-
   return (
     <section className="rounded-2xl border border-border-dash bg-card-background-dash">
       <div className="md:px-6 px-5 py-4 flex sm:flex-row flex-col sm:items-center justify-between gap-4">
@@ -43,7 +30,9 @@ const Products = async () => {
         </div>
       </div>
       <div className="md:px-6 px-5">
-        <ProductsTable products={products} />
+        <Suspense fallback={<h5>Loading...</h5>}>
+          <ProductsTable />
+        </Suspense>
       </div>
       <div className="md:px-6 px-5 py-4 border-t border-t-border-dash">
         <Pagination />

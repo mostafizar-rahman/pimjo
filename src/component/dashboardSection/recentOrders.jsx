@@ -1,5 +1,7 @@
+import { getOrders } from "@/lib/data";
 import { PiFilter } from "@/lib/icons";
 import Image from "next/image";
+import ErrorDIsplay from "./errorDIsplay";
 
 export const StatusBadge = ({ status }) => {
   let bgColorClass = "";
@@ -27,7 +29,9 @@ export const StatusBadge = ({ status }) => {
   );
 };
 
-const RecentOrders = ({ orders }) => {
+const RecentOrders = async () => {
+  const { data: orders, error, success } = await getOrders();
+  if (!success) return <ErrorDIsplay error={error} />;
   return (
     <div className="bg-card-background-dash md:px-6 px-5 pb-3 rounded-2xl outline outline-border-dash min-w-0">
       <div className="py-4 flex sm:flex-row flex-col gap-4 sm:items-center justify-between">
